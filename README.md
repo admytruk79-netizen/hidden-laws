@@ -41,6 +41,25 @@ Add these encrypted/plain variables in Cloudflare as appropriate:
 
 If `CONTACTS` is bound, KV storage takes priority. If neither backend is configured, the form fails safely and directs the visitor to email instead.
 
+## Editable content backend
+
+The `hidden-laws-v2` branch adds runtime-editable public content without hard-coding future copy changes into `index.html`.
+
+Create a second KV namespace and bind it to the Pages project as:
+
+- `CONTENT`
+
+The public site reads editable copy from `GET /api/content`. A Pages middleware injects `dynamic-content.js` into the homepage so saved values override the built-in defaults at runtime.
+
+### Admin area
+
+Open `/admin.html` after deployment. Configure these Cloudflare environment variables/secrets:
+
+- `ADMIN_PASSWORD` — password used to access the editor
+- `SESSION_SECRET` — long random secret used to sign the 12-hour admin cookie
+
+The admin can edit the hero, mission, about copy and booking introduction. Changes are saved to the `CONTENT` KV binding and appear on the public homepage immediately without a redeploy.
+
 ## Content direction
 
 Hidden Laws is the umbrella home for Oleksandr's mission and work. ASCEND is presented as a coherent system with three distinct expressions: Keys, Path and Journey. Ancestral Roots, Reiki/energetic work, Qigong/subtle-body work, books and private sessions sit beneath the same mission: preserving, developing and passing on practical knowledge while uniting inner and outer worlds through grounded practice and integration.
