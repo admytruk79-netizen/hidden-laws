@@ -1,1 +1,1 @@
-Trigger Cloudflare Pages preview deployment for hidden-laws-v2 after styling and contact backend updates.
+Trigger Cloudflare Pages production deployment from main after Hidden Laws styling/backend update. Redeploy requested 2026-09-14.
