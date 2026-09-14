@@ -4,19 +4,43 @@ Primary website for Oleksandr Dmytruk's body of work, including ASCEND Keys, ASC
 
 ## Cloudflare Pages
 
-Recommended Pages settings:
-
 - Production branch: `main`
 - Framework preset: `None`
 - Build command: leave blank
 - Build output directory: `/`
 
-The root `index.html` is deployable as a static Cloudflare Pages site.
+The root `index.html` is the public site. Cloudflare Pages Functions under `functions/api/` provide the dynamic layer.
 
-## Next implementation steps
+## Booking
 
-1. Connect the existing `hiddenlaws` Cloudflare Pages project to this repository.
-2. Add the user's booking provider URL and wire all booking CTAs to it.
-3. Add real project imagery and approved biography photography.
-4. Add individual pages for ASCEND Keys, ASCEND Path, ASCEND Journey, Ancestral Roots, books/teachings and private work.
-5. Add Cloudflare Functions / Worker-backed admin and content editing when required.
+The site reads its booking destination from `/api/config`. In Cloudflare Pages, add a plain-text environment variable:
+
+- `BOOKING_URL` — full booking URL, for example a Cal.com booking page.
+
+Once set, every **Book a Session** button automatically opens that URL. Until then the buttons fall back to the booking/contact section on the site.
+
+## Contact backend
+
+`POST /api/contact` validates inquiries and supports either of two backends.
+
+### Option A — Cloudflare KV
+
+Create a KV namespace and bind it to the Pages project as:
+
+- `CONTACTS`
+
+Inquiries are stored with keys beginning `inquiry:`.
+
+### Option B — Email via Resend
+
+Add these encrypted/plain variables in Cloudflare as appropriate:
+
+- `RESEND_API_KEY`
+- `CONTACT_TO` — destination inbox, e.g. `admytruk@proton.me`
+- `CONTACT_FROM` — verified sender address/domain in Resend
+
+If `CONTACTS` is bound, KV storage takes priority. If neither backend is configured, the form fails safely and directs the visitor to email instead.
+
+## Content direction
+
+Hidden Laws is the umbrella home for Oleksandr's mission and work. ASCEND is presented as a coherent system with three distinct expressions: Keys, Path and Journey. Ancestral Roots, Reiki/energetic work, Qigong/subtle-body work, books and private sessions sit beneath the same mission: preserving, developing and passing on practical knowledge while uniting inner and outer worlds through grounded practice and integration.
