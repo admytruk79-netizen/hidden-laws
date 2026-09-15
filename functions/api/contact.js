@@ -12,22 +12,27 @@ export async function onRequestPost(context){
 
   const record={id:crypto.randomUUID(),createdAt:new Date().toISOString(),name,email,subject,message};
   const key=`inquiry:${record.createdAt}:${record.id}`;
-  let stored=false,emailed=false;
+  let stored=false,emailed=false,emailError='';
 
-  // Prefer the dedicated CONTACTS KV binding when present. If it is not configured,
-  // persist inquiries in the already-used CONTENT KV so the form never becomes a dead end.
   const store=context.env.CONTACTS||context.env.CONTENT;
   if(store){try{await store.put(key,JSON.stringify(record));stored=true}catch{}}
 
-  // Email delivery is optional; storage above is authoritative.
   const to=(context.env.CONTACT_TO||'admytruk@proton.me').trim();
-  if(context.env.RESEND_API_KEY&&context.env.CONTACT_FROM&&to){
+  const from=(context.env.CONTACT_FROM||'Hidden Laws <contact@hidden-laws.com>').trim();
+  if(context.env.RESEND_API_KEY&&to){
     try{
-      const r=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:`Bearer ${context.env.RESEND_API_KEY}`,'content-type':'application/json'},body:JSON.stringify({from:context.env.CONTACT_FROM,to:[to],reply_to:email,subject:`Hidden Laws inquiry: ${subject}`,text:`Name: ${name}\nEmail: ${email}\n\n${message}`})});
+      const r=await fetch('https://api.resend.com/emails',{method:'POST',headers:{authorization:`Bearer ${context.env.RESEND_API_KEY}`,'content-type':'application/json'},body:JSON.stringify({from,to:[to],reply_to:email,subject:`Hidden Laws inquiry: ${subject}`,text:`Name: ${name}\nEmail: ${email}\n\n${message}`})});
       emailed=r.ok;
-    }catch{}
+      if(!r.ok){
+        const detail=await r.json().catch(()=>null);
+        emailError=detail?.message||`Email provider returned ${r.status}.`;
+      }
+    }catch(err){emailError=err?.message||'Email delivery failed.'}
+  }else{
+    emailError='Email delivery is not configured.';
   }
 
-  if(stored||emailed)return json({ok:true,stored,emailed});
-  return json({error:'Unable to save the inquiry right now. Please email admytruk@proton.me.'},503);
+  if(emailed)return json({ok:true,stored,emailed:true,message:'Your inquiry was sent.'});
+  if(stored)return json({ok:true,stored:true,emailed:false,message:'Your inquiry was saved, but email delivery is not active yet.',emailError});
+  return json({error:'Unable to save or email the inquiry right now. Please email admytruk@proton.me.',emailError},503);
 }
