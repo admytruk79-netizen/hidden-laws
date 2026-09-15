@@ -1,12 +1,13 @@
+const CONTENT_KEY='site:content:v2';
 const DEFAULTS = {
   heroKicker: 'Knowledge · Practice · Integration',
   heroTitle: 'Uniting the worlds.',
-  heroLead: 'A living body of work devoted to self-knowledge, conscious development, ancestral connection, energetic awareness and bringing inner experience back into ordinary life.',
-  mission: 'To preserve, develop and pass on practical knowledge that helps people understand themselves, reconnect with deeper layers of life, and bring what they discover back into the world.',
-  missionBody: 'The aim is not to escape one world for another. It is to unite inner and outer, visible and subtle, ancestral and present, knowledge and experience — and make that connection useful in everyday life.',
+  heroLead: 'Hidden Laws is the home of my work in conscious development, ancestral practice, Qigong, Reiki, energetic awareness and the ASCEND system — built to bring inner experience back into ordinary life.',
+  mission: 'To preserve, develop and pass on practical knowledge that helps people understand themselves, reconnect with deeper layers of life, and carry what they discover back into the world.',
+  missionBody: 'The aim is not to escape one world for another. It is to connect inner and outer, visible and subtle, ancestral and present, knowledge and experience — while keeping discernment, responsibility and ordinary life at the center.',
   aboutTitle: 'Oleksandr Dmytruk',
-  aboutBody: 'Author, teacher, shamanic practitioner, Qigong teacher and Reiki practitioner working across contemplative development, ancestral work, energetic practice and astral guidance. His work brings structured training, symbolic teaching and direct practice into one coherent path.',
-  bookingIntro: 'Book a private session directly through the calendar, or send an inquiry if you are not sure which form of work is right for you.'
+  aboutBody: 'I am an author, teacher and practitioner based in Portland, working across Qigong, Reiki, ancestral work, shamanic traditions, energetic practice and astral or subtle-body guidance. I founded the 12 Rays School and continue to develop the ASCEND body of work through writing, structured training and private practice.',
+  bookingIntro: 'Choose a private session through the connected calendar, or send an inquiry if you are not sure which form of work is the right starting point.'
 };
 function json(data,status=200){return new Response(JSON.stringify(data),{status,headers:{'content-type':'application/json; charset=utf-8','cache-control':'no-store'}})}
-export async function onRequestGet(context){let saved={};if(context.env.CONTENT){try{saved=JSON.parse((await context.env.CONTENT.get('site:content'))||'{}')}catch{}}return json({...DEFAULTS,...saved})}
+export async function onRequestGet(context){let saved={};if(context.env.CONTENT){try{saved=JSON.parse((await context.env.CONTENT.get(CONTENT_KEY))||'{}')}catch{}}return json({...DEFAULTS,...saved})}
