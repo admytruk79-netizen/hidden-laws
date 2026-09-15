@@ -10,6 +10,9 @@ export async function onRequest(context){
   if(!injected.includes('/art-loader.js')){
     injected=injected.replace('</body>','<script src="/art-loader.js?v=20260915-5" defer></script></body>');
   }
+  if(!injected.includes('/mobile-layout-fix.js')){
+    injected=injected.replace('</body>','<script src="/mobile-layout-fix.js?v=20260915-1" defer></script></body>');
+  }
   const headers=new Headers(response.headers);
   headers.delete('content-length');
   headers.set('cache-control','no-store');
