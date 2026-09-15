@@ -1,11 +1,11 @@
 (()=>{
   const assets={
-    threshold:'/art/threshold.b64',
-    integration:'/art/integration.b64',
-    path:'/art/path.b64',
-    akharata:'/art/akharata.b64',
-    tree:'/art/tree.b64',
-    lotus:'/art/lotus.b64'
+    threshold:'/art/threshold.webp',
+    integration:'/art/integration.webp',
+    path:'/art/path.webp',
+    akharata:'/art/akharata.webp',
+    tree:'/art/tree.webp',
+    lotus:'/art/lotus.webp'
   };
 
   const style=document.createElement('style');
@@ -48,7 +48,8 @@
     img.alt=alt;
     img.loading=key==='threshold'?'eager':'lazy';
     img.decoding='async';
-    img.dataset.artKey=key;
+    img.src=assets[key];
+    img.addEventListener('error',()=>{frame.remove();},{once:true});
     frame.appendChild(img);
     if(key==='akharata'){
       const halo=document.createElement('div');
@@ -101,13 +102,6 @@
   const work=document.querySelector('#work')||document.querySelector('#booking');
   const lotus=put(work,'lotus','art-lotus','A lotus floating on water at sunrise','Reiki · Energetic Practice');
   if(lotus)frames.push(lotus);
-
-  Promise.all(Object.entries(assets).map(async([key,url])=>{
-    const r=await fetch(url,{cache:'force-cache'});
-    if(!r.ok)throw new Error(`Unable to load ${key} artwork`);
-    const b64=(await r.text()).trim();
-    document.querySelectorAll(`img[data-art-key="${key}"]`).forEach(img=>{img.src=`data:image/webp;base64,${b64}`});
-  })).catch(err=>console.error(err));
 
   if('IntersectionObserver'in window){
     const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -4% 0px'});
