@@ -8,7 +8,7 @@ export async function onRequest(context){
     injected=injected.replace('</body>','<script src="/site-enhancements.js?v=20260914-2" defer></script></body>');
   }
   if(!injected.includes('/art-loader.js')){
-    injected=injected.replace('</body>','<script src="/art-loader.js?v=20260915-4" defer></script></body>');
+    injected=injected.replace('</body>','<script src="/art-loader.js?v=20260915-5" defer></script></body>');
   }
   const headers=new Headers(response.headers);
   headers.delete('content-length');
