@@ -1,1 +1,2 @@
-Trigger Cloudflare Pages production deployment from main after Hidden Laws styling/backend update. Redeploy requested 2026-09-14.
+Trigger Cloudflare Pages production deployment from main after Hidden Laws styling/backend update.
+Redeploy requested 2026-09-14 after final homepage, middleware, content API, booking, and admin fixes.
