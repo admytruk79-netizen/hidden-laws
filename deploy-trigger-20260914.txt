@@ -1,2 +1,2 @@
 Trigger Cloudflare Pages production deployment from main after Hidden Laws styling/backend update.
-Redeploy requested 2026-09-14 after final homepage, middleware, content API, booking, and admin fixes.
+Redeploy requested 2026-09-14 22:07 PT after ASCEND Keys link, Akharata, ASCEND Journey in-development status, contact-form storage, admin inquiry inbox, and booking cleanup.
