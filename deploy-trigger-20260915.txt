@@ -1,0 +1,4 @@
+Force Cloudflare Pages redeploy for Hidden Laws.
+Deployments tab showed no new build after commit 5f44cd1 (art fixes),
+despite the push landing cleanly on GitHub main. Redeploy requested
+2026-09-15T17:12:59Z to get the artwork fix actually live.
