@@ -1,3 +1,4 @@
 Trigger Cloudflare Pages production deployment from main after Hidden Laws styling/backend update.
 Redeploy requested 2026-09-14 22:07 PT after ASCEND Keys link, Akharata, ASCEND Journey in-development status, contact-form storage, admin inquiry inbox, and booking cleanup.
 Redeploy requested 2026-09-14 after stronger cinematic motion system was applied site-wide.
+Redeploy requested 2026-09-15 12:55 PT for dark redesign + six WebP artwork assets + updated artwork loader. Production branch: main.
