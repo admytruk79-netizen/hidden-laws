@@ -81,7 +81,7 @@
   }
 
   const mission=document.querySelector('#mission')||document.querySelector('#about');
-  const missionArt=put(mission,'integration','art-integration','A figure standing between fire and water, symbolizing integration','Mission · Uniting the Worlds');
+  const missionArt=put(mission,'integration','art-integration','Sun and moon joined by a single column of light, symbolizing integration','Mission · Uniting the Worlds');
   if(missionArt)frames.push(missionArt);
 
   const ascend=document.querySelector('#ascend');
@@ -89,7 +89,7 @@
     const grid=document.createElement('div');
     grid.className='section-art-grid ascend-art-gallery';
     const path=makeArt('path','art-path','A luminous mountain path under a quiet moon','ASCEND Path');
-    const akharata=makeArt('akharata','art-akharata','A geometric human subtle-body mandala with chakra colors','Akharata · Subtle-Body Work');
+    const akharata=makeArt('akharata','art-akharata','A radiant geometric tree of light within a crystalline cube, representing the subtle body','Akharata · Subtle-Body Work');
     grid.append(path,akharata);
     (ascend.querySelector('.wrap')||ascend).appendChild(grid);
     frames.push(path,akharata);
