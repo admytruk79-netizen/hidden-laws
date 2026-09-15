@@ -7,10 +7,11 @@ async function authorized(context){
   const [payload,sig]=m[1].split('.'); if(!payload||!sig||Number(payload)<Date.now())return false;
   return sig===await sign(secret,payload);
 }
+const CONTENT_KEY='site:content:v2';
 const ALLOWED=['heroKicker','heroTitle','heroLead','mission','missionBody','aboutTitle','aboutBody','bookingIntro'];
 export async function onRequestGet(context){
   if(!await authorized(context))return json({error:'Unauthorized.'},401);
-  let saved={}; if(context.env.CONTENT){try{saved=JSON.parse((await context.env.CONTENT.get('site:content'))||'{}')}catch{}}
+  let saved={}; if(context.env.CONTENT){try{saved=JSON.parse((await context.env.CONTENT.get(CONTENT_KEY))||'{}')}catch{}}
   return json(saved);
 }
 export async function onRequestPost(context){
@@ -18,5 +19,5 @@ export async function onRequestPost(context){
   if(!context.env.CONTENT)return json({error:'CONTENT KV binding is not configured.'},503);
   let body;try{body=await context.request.json()}catch{return json({error:'Invalid request.'},400)}
   const clean={}; for(const key of ALLOWED){if(body[key]!==undefined)clean[key]=String(body[key]).trim().slice(0,6000)}
-  await context.env.CONTENT.put('site:content',JSON.stringify(clean)); return json({ok:true,content:clean});
+  await context.env.CONTENT.put(CONTENT_KEY,JSON.stringify(clean)); return json({ok:true,content:clean});
 }
