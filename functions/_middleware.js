@@ -25,6 +25,9 @@ export async function onRequest(context){
   if(!injected.includes('/typography-stability.js')){
     injected=injected.replace('</body>','<script src="/typography-stability.js?v=20260915-1" defer></script></body>');
   }
+  if(!injected.includes('/lineage-display-fix.js')){
+    injected=injected.replace('</body>','<script src="/lineage-display-fix.js?v=20260916-1" defer></script></body>');
+  }
   const headers=new Headers(response.headers);
   headers.delete('content-length');
   headers.set('cache-control','no-store');
