@@ -19,6 +19,9 @@ export async function onRequest(context){
   if(!injected.includes('/art-motion-fix.js')){
     injected=injected.replace('</body>','<script src="/art-motion-fix.js?v=20260915-1" defer></script></body>');
   }
+  if(!injected.includes('/book-links.js')){
+    injected=injected.replace('</body>','<script src="/book-links.js?v=20260915-1" defer></script></body>');
+  }
   const headers=new Headers(response.headers);
   headers.delete('content-length');
   headers.set('cache-control','no-store');
