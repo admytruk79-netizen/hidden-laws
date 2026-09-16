@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="t d">
+<title id="t">Cossack kharakternyk lineage at sunset</title><desc id="d">A cinematic symbolic scene of a Cossack kharakternyk standing on the steppe at sunset beneath a vast sky.</desc>
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#121a36"/><stop offset=".45" stop-color="#563d62"/><stop offset=".72" stop-color="#b45f3f"/><stop offset="1" stop-color="#d9a15a"/></linearGradient>
+<linearGradient id="land" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#314030"/><stop offset="1" stop-color="#101a17"/></linearGradient>
+<radialGradient id="sun"><stop offset="0" stop-color="#ffdca0"/><stop offset=".65" stop-color="#f2b65e"/><stop offset="1" stop-color="#e68139"/></radialGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<circle cx="1230" cy="265" r="95" fill="url(#sun)" filter="url(#glow)" opacity=".96"/>
+<path d="M0 540 C260 500 420 560 640 520 S980 500 1600 560 L1600 900 L0 900Z" fill="url(#land)"/>
+<path d="M0 615 C280 565 510 640 760 590 S1180 575 1600 635" fill="none" stroke="#76895f" stroke-width="8" opacity=".35"/>
+<g transform="translate(730 290)">
+<path d="M74 88c0-39 25-70 59-70s60 31 60 70c0 26-11 47-28 59 18 25 29 59 29 96v238h-125V244c0-37 11-72 29-97-15-12-24-33-24-59Z" fill="#101319"/>
+<path d="M80 70c15-34 40-52 78-49 29 3 54 21 65 44-30-10-55-13-75-9-27 4-47 15-68 14Z" fill="#17151b"/>
+<path d="M92 175c24 12 53 16 87 9 18-4 33-10 47-18l31 65-48 29-16-28-9 267h-78l-8-268-16 28-48-29Z" fill="#1a2020"/>
+<path d="M46 195 8 462" stroke="#161412" stroke-width="18" stroke-linecap="round"/>
+<path d="M240 186 290 475" stroke="#161412" stroke-width="18" stroke-linecap="round"/>
+<path d="M298 100 288 498" stroke="#0b0d0d" stroke-width="13"/>
+<path d="M277 95q31-34 61 0l-11 20h-39Z" fill="#0b0d0d"/>
+</g>
+<g opacity=".22" stroke="#efcf8b" stroke-width="2" fill="none">
+<circle cx="865" cy="495" r="150"/><circle cx="865" cy="495" r="205"/><path d="M865 290v410M660 495h410M720 350l290 290M1010 350 720 640"/>
+</g>
+<path d="M0 790c220-40 320-25 490 10s350 24 510 0 390-40 600 10v90H0Z" fill="#0a1010" opacity=".92"/>
+</svg>
