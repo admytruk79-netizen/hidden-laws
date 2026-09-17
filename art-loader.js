@@ -1,13 +1,12 @@
 (()=>{
-  const version='20260917-1';
+  const version='20260917-2';
   const assets={
     threshold:`/art/threshold.webp?v=${version}`,
     integration:`/art/integration.webp?v=${version}`,
     path:`/art/path.webp?v=${version}`,
     akharata:`/art/akharata.webp?v=${version}`,
     tree:`/art/tree.webp?v=${version}`,
-    lotus:`/art/lotus.webp?v=${version}`,
-    monk:`/art/monk.webp?v=${version}`
+    lotus:`/art/lotus.webp?v=${version}`
   };
 
   const style=document.createElement('style');
@@ -54,9 +53,6 @@
 
     .art-lotus .art-media:before{left:-18%;right:-18%;bottom:-8%;height:45%;background:repeating-radial-gradient(ellipse at 50% 100%,rgba(166,202,255,.18) 0 2px,transparent 3px 18px);opacity:.38;animation:ripple 5.5s ease-in-out infinite}
     .art-lotus .art-media:after{width:34%;aspect-ratio:1;border-radius:50%;right:8%;top:16%;background:radial-gradient(circle,rgba(255,219,147,.30),rgba(255,193,92,.12) 45%,transparent 70%);opacity:.55;animation:sunPulse 5s ease-in-out infinite}
-
-    .art-monk .art-media:before{inset:0;background:radial-gradient(circle at 62% 20%,rgba(255,201,120,.30),transparent 24%),linear-gradient(180deg,rgba(255,255,255,.08),transparent 40%);opacity:.5;animation:moonAura 7.2s ease-in-out infinite}
-    .art-monk .art-media:after{left:-15%;right:-15%;top:-6%;height:30%;background:linear-gradient(180deg,rgba(255,236,200,.20),transparent);filter:blur(12px);opacity:.4;animation:hazeDrift 8.5s ease-in-out infinite alternate}
 
     @keyframes artGlow{0%,100%{opacity:.28;transform:scale(.98)}50%{opacity:.58;transform:scale(1.03)}}
     @keyframes thresholdLight{0%{transform:translate3d(-1%,1%,0) scale(.98);opacity:.42}100%{transform:translate3d(1.5%,-1%,0) scale(1.04);opacity:.68}}
@@ -209,7 +205,7 @@
     ancestral,
     'tree',
     'art-tree',
-    'A Cossack kharakternyk seated among ancestral standing stones at sunset, sun and moon both in the sky',
+    'A branching purple and orange tree representing lineage',
     'Ancestral Roots',
     'Guided lineage work focused on reconnection, reflection and integration across maternal and paternal lines.'
   );
@@ -220,22 +216,11 @@
     work,
     'lotus',
     'art-lotus',
-    'A Siberian shaman with a ritual drum beneath the aurora and a rising moon',
-    'Shamanic & Energetic Practice',
-    'Grounded energetic and shamanic work with attention to integration, clarity and practical application.'
+    'A lotus floating on water at sunrise',
+    'Reiki · Energetic Practice',
+    'Grounded energetic work with attention to integration, clarity and practical application.'
   );
   if(lotus)frames.push(lotus);
-
-  const teachings=document.querySelector('#teachings');
-  const monk=put(
-    teachings,
-    'monk',
-    'art-monk',
-    'A Tibetan monk meditating at sunrise above the clouds near a mountain monastery',
-    'Hidden Laws · Contemplative Tradition',
-    'Chakras, subtle bodies, perception and reflection as part of a progressive contemplative practice.'
-  );
-  if(monk)frames.push(monk);
 
   // Remove a title that is not part of the actual body of work.
   document.querySelectorAll('.book').forEach(book=>{
