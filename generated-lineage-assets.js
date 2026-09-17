@@ -1,13 +1,24 @@
 (()=>{
+  const sources=[
+    '/assets/generated/siberian-shaman.b64',
+    '/assets/generated/tibetan-yogi.b64',
+    '/assets/generated/cossack-kharakternyk.b64'
+  ];
   const cards=[...document.querySelectorAll('.bio-lineage-card')];
-  const paths=['/assets/generated/siberian-shaman.png','/assets/generated/tibetan-yogi.png','/assets/generated/cossack-kharakternyk.png'];
-  cards.slice(0,3).forEach((card,i)=>{
+  cards.slice(0,3).forEach(async (card,i)=>{
     const img=card.querySelector('img');
     if(!img)return;
-    img.removeAttribute('srcset');
-    img.removeAttribute('sizes');
-    img.src=paths[i];
-    img.loading=i===0?'eager':'lazy';
-    img.decoding='async';
+    try{
+      const res=await fetch(sources[i],{cache:'no-store'});
+      if(!res.ok)throw new Error(`asset ${i} ${res.status}`);
+      const b64=(await res.text()).trim();
+      img.removeAttribute('srcset');
+      img.removeAttribute('sizes');
+      img.loading=i===0?'eager':'lazy';
+      img.decoding='async';
+      img.src='data:image/webp;base64,'+b64;
+    }catch(err){
+      console.error('Generated lineage asset failed',err);
+    }
   });
 })();
