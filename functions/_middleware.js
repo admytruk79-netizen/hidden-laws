@@ -38,7 +38,7 @@ export async function onRequest(context){
     injected=injected.replace('</body>','<script src="/lineage-image-quality.js?v=20260916-2" defer></script></body>');
   }
   if(!injected.includes('/generated-lineage-assets.js')){
-    injected=injected.replace('</body>','<script src="/generated-lineage-assets.js?v=20260917-2" defer></script></body>');
+    injected=injected.replace('</body>','<script src="/generated-lineage-assets.js?v=20260917-3" defer></script></body>');
   }
   const headers=new Headers(response.headers);
   headers.delete('content-length');
