@@ -12,7 +12,7 @@
     img.removeAttribute('sizes');
     img.loading=i===0?'eager':'lazy';
     img.decoding='async';
-    img.src=sources[i];
+    img.src=sources[i]+'?v=20260917-1';
     img.style.width='100%';
     img.style.height='auto';
     img.style.aspectRatio='4 / 3';
