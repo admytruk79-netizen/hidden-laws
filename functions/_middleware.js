@@ -8,7 +8,7 @@ export async function onRequest(context){
     injected=injected.replace('</body>','<script src="/site-enhancements.js?v=20260914-2" defer></script></body>');
   }
   if(!injected.includes('/art-loader.js')){
-    injected=injected.replace('</body>','<script src="/art-loader.js?v=20260918-3-cachefix" defer></script></body>');
+    injected=injected.replace('</body>','<script src="/art-loader.js?v=20260918-4" defer></script></body>');
   }
   if(!injected.includes('/book-links.js')){
     injected=injected.replace('</body>','<script src="/book-links.js?v=20260915-1" defer></script></body>');
