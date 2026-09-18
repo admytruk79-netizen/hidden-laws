@@ -1,0 +1,9 @@
+Force Cloudflare Pages redeploy for Hidden Laws.
+
+Artwork restoration (corrupted webp -> restored/upscaled originals) and
+the broken art-quality-guard.js middleware injection (invalid JS syntax)
+landed on main across commits e111486..21189d6, but the user reports the
+fix is still not visible on the live site. Same failure mode documented
+in deploy-trigger-20260915.txt: commits land cleanly on GitHub main with
+no corresponding new build in the Cloudflare Pages Deployments tab.
+Redeploy requested 2026-09-18 to get the artwork fix actually live.
