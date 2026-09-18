@@ -1,5 +1,5 @@
 (()=>{
-  const version='20260918-4';
+  const version='20260918-5';
   const assets={
     threshold:`/art/threshold.webp?v=${version}`,
     integration:`/art/integration.webp?v=${version}`,
@@ -166,7 +166,7 @@
     const path=makeArt(
       'path',
       'art-path',
-      'A luminous alpine landscape beneath a quiet celestial moon',
+      'A traveler beginning a glowing path through a misty valley toward distant mountains beneath a great moon and orbiting rings of light',
       'ASCEND Path',
       'The structured 24-month developmental training pathway with daily practice, progression and integration.',
       'https://admytruk79-netizen.github.io/ascend-nerve/',
@@ -205,7 +205,7 @@
     ancestral,
     'tree',
     'art-tree',
-    'A branching purple and orange tree representing lineage',
+    'A great tree at sunset with sun and moon standing stones, its roots forming the luminous faces of ancestors',
     'Ancestral Roots',
     'Guided lineage work focused on reconnection, reflection and integration across maternal and paternal lines.'
   );
