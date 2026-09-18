@@ -19,6 +19,9 @@ export async function onRequest(context){
   if(!injected.includes('/about-origin.js')){
     injected=injected.replace('</body>','<script src="/about-origin.js?v=20260918-1" defer></script></body>');
   }
+  if(!injected.includes('/touch-motion.js')){
+    injected=injected.replace('</body>','<script src="/touch-motion.js?v=20260917-1" defer></script></body>');
+  }
   const headers=new Headers(response.headers);
   headers.delete('content-length');
   headers.set('cache-control','no-store');
