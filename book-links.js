@@ -5,8 +5,8 @@
   const items=[
     {
       title:"Akharata System",
-      meta:"Foundations for Consciousness Development",
-      href:"https://www.amazon.com/dp/B0HD6WSXQC"
+      meta:"Ahavata series · Foundations for Consciousness Development",
+      href:"https://www.amazon.com.br/Akharata-System-Foundations-Consciousness-Development/dp/B0HD6WSXQC"
     },
     {
       title:"Year’s Kaleidoscope",
@@ -16,17 +16,17 @@
     {
       title:"Fire of Becoming",
       meta:"Kaleidoscope series · Book 2",
-      href:null
+      href:"https://www.amazon.com/s?k=9798180880314"
     },
     {
       title:"The Invisible Strike",
       meta:"Energetic Raids, the Five Centers, and the Art of Defense",
-      href:null
+      href:"https://www.amazon.com/s?k=9798185508244"
     },
     {
       title:"Energy Massage: Practitioner’s Manual",
       meta:"Chakras, Nadis, Kundalini, Zodiac & the Five Elements",
-      href:null
+      href:"https://www.amazon.com/s?k=9798187952137"
     }
   ];
 

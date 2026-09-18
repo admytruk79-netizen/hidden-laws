@@ -11,7 +11,7 @@ export async function onRequest(context){
     injected=injected.replace('</body>','<script src="/art-loader.js?v=20260918-5" defer></script></body>');
   }
   if(!injected.includes('/book-links.js')){
-    injected=injected.replace('</body>','<script src="/book-links.js?v=20260918-2" defer></script></body>');
+    injected=injected.replace('</body>','<script src="/book-links.js?v=20260918-3" defer></script></body>');
   }
   if(!injected.includes('/bio-lineage.js')){
     injected=injected.replace('</body>','<script src="/bio-lineage.js?v=20260918-2-cachefix" defer></script></body>');
