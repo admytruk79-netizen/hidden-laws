@@ -151,7 +151,7 @@
     mission,
     'integration',
     'art-integration',
-    'Sun and moon joined by a single column of light, symbolizing integration',
+    'A guardian figure standing between radiant fire and deep water, symbolizing integration',
     'Mission · Uniting the Worlds',
     'Inner and outer, visible and subtle, knowledge and lived experience brought back into one practice.'
   );
@@ -166,7 +166,7 @@
     const path=makeArt(
       'path',
       'art-path',
-      'A luminous mountain path under a quiet moon',
+      'A luminous alpine landscape beneath a quiet celestial moon',
       'ASCEND Path',
       'The structured 24-month developmental training pathway with daily practice, progression and integration.',
       'https://admytruk79-netizen.github.io/ascend-nerve/',
@@ -175,7 +175,7 @@
     const akharata=makeArt(
       'akharata',
       'art-akharata',
-      'A radiant geometric tree of light within a crystalline cube, representing the subtle body',
+      'A luminous stained-glass chakra mandala representing the subtle body and integrated energetic structure',
       'Akharata · Subtle-Body Work',
       'An advanced supporting layer within ASCEND for subtle-body development and deeper energetic practice.'
     );
