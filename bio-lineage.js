@@ -2,7 +2,7 @@
   const about=document.querySelector('#about');
   if(!about||document.querySelector('.bio-lineage')) return;
 
-  const version='20260918-1';
+  const version='20260918-2-cachefix';
   const siberian=`/art/lineage-siberian.webp?v=${version}`;
   const tibetan=`/art/lineage-tibetan.webp?v=${version}`;
   const cossack=`/art/lineage-cossack.webp?v=${version}`;

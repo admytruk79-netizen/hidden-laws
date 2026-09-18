@@ -8,13 +8,13 @@ export async function onRequest(context){
     injected=injected.replace('</body>','<script src="/site-enhancements.js?v=20260914-2" defer></script></body>');
   }
   if(!injected.includes('/art-loader.js')){
-    injected=injected.replace('</body>','<script src="/art-loader.js?v=20260918-2" defer></script></body>');
+    injected=injected.replace('</body>','<script src="/art-loader.js?v=20260918-3-cachefix" defer></script></body>');
   }
   if(!injected.includes('/book-links.js')){
     injected=injected.replace('</body>','<script src="/book-links.js?v=20260915-1" defer></script></body>');
   }
   if(!injected.includes('/bio-lineage.js')){
-    injected=injected.replace('</body>','<script src="/bio-lineage.js?v=20260918-1" defer></script></body>');
+    injected=injected.replace('</body>','<script src="/bio-lineage.js?v=20260918-2-cachefix" defer></script></body>');
   }
   if(!injected.includes('/about-origin.js')){
     injected=injected.replace('</body>','<script src="/about-origin.js?v=20260918-1" defer></script></body>');
