@@ -1,5 +1,5 @@
 (()=>{
-  const version='20260917-2';
+  const version='20260918-2';
   const assets={
     threshold:`/art/threshold.webp?v=${version}`,
     integration:`/art/integration.webp?v=${version}`,
