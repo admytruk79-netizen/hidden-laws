@@ -14,7 +14,10 @@ export async function onRequest(context){
     injected=injected.replace('</body>','<script src="/book-links.js?v=20260915-1" defer></script></body>');
   }
   if(!injected.includes('/bio-lineage.js')){
-    injected=injected.replace('</body>','<script src="/bio-lineage.js?v=20260917-1" defer></script></body>');
+    injected=injected.replace('</body>','<script src="/bio-lineage.js?v=20260918-1" defer></script></body>');
+  }
+  if(!injected.includes('/about-origin.js')){
+    injected=injected.replace('</body>','<script src="/about-origin.js?v=20260918-1" defer></script></body>');
   }
   const headers=new Headers(response.headers);
   headers.delete('content-length');
