@@ -8,42 +8,42 @@
       meta:"Volume I · The Structure of Man",
       isbn:"ASIN B0HD6WSXQC",
       desc:"The foundational text behind the Akharata system — a structured map of inner development drawn from shamanic, yogic and energetic training, organized into a clear framework for practice rather than abstract theory.",
-      href:"https://www.amazon.com/dp/B0HD6WSXQC"
+      href:"https://www.amazon.com/gp/product/B0HD6WSXQC?language=en_US&currency=USD"
     },
     {
       title:"Year’s Kaleidoscope",
       meta:"Kaleidoscope series · Book 1",
       isbn:"ASIN B0H2NHP3HF",
       desc:"The opening volume of the Kaleidoscope series, following a year of practice, observation and inner change through the turning of the seasons.",
-      href:"https://www.amazon.com/dp/B0H2NHP3HF"
+      href:"https://www.amazon.com/gp/product/B0H2NHP3HF?language=en_US&currency=USD"
     },
     {
       title:"Fire of Becoming",
       meta:"Kaleidoscope series · Book 2",
       isbn:"Paperback · ISBN 979-8-1808-8031-4",
       desc:"The second book in the Kaleidoscope series, tracing the transformative fire of personal becoming — the friction, breakdowns and breakthroughs that reshape a person from the inside out.",
-      href:"https://www.amazon.com/s?k=9798180880314&i=stripbooks"
+      href:"https://www.amazon.com/s?k=9798180880314&i=stripbooks&language=en_US&currency=USD"
     },
     {
       title:"The Invisible Strike",
       meta:"Energetic Raids, the Five Centers, and the Art of Defense",
       isbn:"ASIN B0H7QQPL8V",
       desc:"A practical guide to recognizing energetic raids on the five centers of the body and mind, and building real, verifiable defenses against them.",
-      href:"https://www.amazon.com/dp/B0H7QQPL8V"
+      href:"https://www.amazon.com/gp/product/B0H7QQPL8V?language=en_US&currency=USD"
     },
     {
       title:"Energy Massage: Practitioner’s Manual",
       meta:"Chakras, Nadis, Kundalini, Zodiac & the Five Elements",
       isbn:"ASIN B0GX2ZMXDF",
       desc:"A practitioner’s manual connecting chakras, nadis, kundalini, the zodiac and the five elements into one applied system for energy massage and bodywork.",
-      href:"https://www.amazon.com/dp/B0GX2ZMXDF"
+      href:"https://www.amazon.com/gp/product/B0GX2ZMXDF?language=en_US&currency=USD"
     },
     {
       title:"LONG",
       meta:"Catfishing, Romance & the Architecture of Digital Deception",
       isbn:"ASIN B0HBM2VRN3",
       desc:"An examination of catfishing, romance, and the architecture of digital deception.",
-      href:"https://www.amazon.com/dp/B0HBM2VRN3"
+      href:"https://www.amazon.com/gp/product/B0HBM2VRN3?language=en_US&currency=USD"
     }
   ];
 
