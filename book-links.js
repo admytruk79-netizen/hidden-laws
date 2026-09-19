@@ -5,21 +5,21 @@
   const items=[
     {
       title:"Akharata System",
-      meta:"Ahavata series · Foundations for Consciousness Development",
+      meta:"Volume I · The Structure of Man",
       isbn:"ASIN B0HD6WSXQC",
       desc:"The foundational text behind the Akharata system — a structured map of inner development drawn from shamanic, yogic and energetic training, organized into a clear framework for practice rather than abstract theory.",
       href:"https://www.amazon.com/dp/B0HD6WSXQC"
     },
     {
       title:"Year’s Kaleidoscope",
-      meta:"Ahavata series · Book 1",
+      meta:"Kaleidoscope series · Book 1",
       isbn:"ASIN B0H2NHP3HF",
-      desc:"The opening volume of the Ahavata series, following a year of practice, observation and inner change through the turning of the seasons.",
+      desc:"The opening volume of the Kaleidoscope series, following a year of practice, observation and inner change through the turning of the seasons.",
       href:"https://www.amazon.com/dp/B0H2NHP3HF"
     },
     {
       title:"Fire of Becoming",
-      meta:"Standalone title",
+      meta:"Kaleidoscope series · Book 2",
       isbn:"Paperback · ISBN 979-8-1808-8031-4",
       desc:"The second book in the Kaleidoscope series, tracing the transformative fire of personal becoming — the friction, breakdowns and breakthroughs that reshape a person from the inside out.",
       href:"https://www.amazon.com/s?k=9798180880314&i=stripbooks"
