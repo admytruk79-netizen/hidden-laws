@@ -8,7 +8,7 @@
       meta:"Ahavata series · Foundations for Consciousness Development",
       isbn:"ASIN B0HD6WSXQC",
       desc:"The foundational text behind the Akharata system — a structured map of inner development drawn from shamanic, yogic and energetic training, organized into a clear framework for practice rather than abstract theory.",
-      href:"https://www.amazon.com.br/Akharata-System-Foundations-Consciousness-Development/dp/B0HD6WSXQC"
+      href:"https://www.amazon.com/dp/B0HD6WSXQC"
     },
     {
       title:"Year’s Kaleidoscope",
@@ -29,7 +29,7 @@
       meta:"Energetic Raids, the Five Centers, and the Art of Defense",
       isbn:"979-8-1855-0824-4",
       desc:"A practical guide to recognizing energetic raids on the five centers of the body and mind, and building real, verifiable defenses against them.",
-      href:"https://www.amazon.com/s?k=9798185508244"
+      href:"https://www.amazon.com/Invisible-Strike-Energetic-Centers-Defense/dp/B0H7QQPL8V"
     },
     {
       title:"Energy Massage: Practitioner’s Manual",
