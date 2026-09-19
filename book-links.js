@@ -19,7 +19,7 @@
     },
     {
       title:"Fire of Becoming",
-      meta:"Kaleidoscope series · Book 2",
+      meta:"Standalone title",
       isbn:"Paperback · ISBN 979-8-1808-8031-4",
       desc:"The second book in the Kaleidoscope series, tracing the transformative fire of personal becoming — the friction, breakdowns and breakthroughs that reshape a person from the inside out.",
       href:"https://www.amazon.com/s?k=9798180880314&i=stripbooks"
