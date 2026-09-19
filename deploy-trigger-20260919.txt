@@ -1,0 +1,6 @@
+Force Cloudflare Pages production rebuild from main.
+
+Apply the latest Hidden Laws updates now live: corrected Amazon book links and series metadata, plus ASCEND Path marked as under development with the inactive app link removed.
+
+Target content commit: 1bd50af3943410cec8fcdbba0a10fe3619aac277
+Trigger created: 2026-09-19.
