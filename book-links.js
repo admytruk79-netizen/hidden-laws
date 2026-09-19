@@ -39,7 +39,7 @@
       href:"https://www.amazon.com/gp/product/B0GX2ZMXDF?language=en_US&currency=USD"
     },
     {
-      title:"LONG",
+      title:"Long Con",
       meta:"Catfishing, Romance & the Architecture of Digital Deception",
       isbn:"ASIN B0HBM2VRN3",
       desc:"An examination of catfishing, romance, and the architecture of digital deception.",
