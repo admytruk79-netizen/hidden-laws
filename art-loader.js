@@ -168,9 +168,9 @@
       'art-path',
       'A traveler beginning a glowing path through a misty valley toward distant mountains beneath a great moon and orbiting rings of light',
       'ASCEND Path',
-      'The structured 24-month developmental training pathway with daily practice, progression and integration.',
-      'https://admytruk79-netizen.github.io/ascend-nerve/',
-      'Open ASCEND Path →'
+      'The structured 24-month developmental training pathway with daily practice, progression and integration. Currently being built — not yet available.',
+      '',
+      'Being built'
     );
     const akharata=makeArt(
       'akharata',
