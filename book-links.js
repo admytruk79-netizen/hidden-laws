@@ -12,10 +12,10 @@
     },
     {
       title:"Year’s Kaleidoscope",
-      meta:"Ahavata series",
-      isbn:null,
+      meta:"Ahavata series · Book 1",
+      isbn:"ASIN B0H2NHP3HF",
       desc:"The opening volume of the Ahavata series, following a year of practice, observation and inner change through the turning of the seasons.",
-      href:null
+      href:"https://www.amazon.com/dp/B0H2NHP3HF"
     },
     {
       title:"Fire of Becoming",
@@ -27,16 +27,23 @@
     {
       title:"The Invisible Strike",
       meta:"Energetic Raids, the Five Centers, and the Art of Defense",
-      isbn:"979-8-1855-0824-4",
+      isbn:"ASIN B0H7QQPL8V",
       desc:"A practical guide to recognizing energetic raids on the five centers of the body and mind, and building real, verifiable defenses against them.",
-      href:"https://www.amazon.com/Invisible-Strike-Energetic-Centers-Defense/dp/B0H7QQPL8V"
+      href:"https://www.amazon.com/dp/B0H7QQPL8V"
     },
     {
       title:"Energy Massage: Practitioner’s Manual",
       meta:"Chakras, Nadis, Kundalini, Zodiac & the Five Elements",
-      isbn:"979-8-1879-5213-7",
+      isbn:"ASIN B0GX2ZMXDF",
       desc:"A practitioner’s manual connecting chakras, nadis, kundalini, the zodiac and the five elements into one applied system for energy massage and bodywork.",
-      href:"https://www.amazon.com/s?k=9798187952137"
+      href:"https://www.amazon.com/dp/B0GX2ZMXDF"
+    },
+    {
+      title:"LONG",
+      meta:"Catfishing, Romance & the Architecture of Digital Deception",
+      isbn:"ASIN B0HBM2VRN3",
+      desc:"An examination of catfishing, romance, and the architecture of digital deception.",
+      href:"https://www.amazon.com/dp/B0HBM2VRN3"
     }
   ];
 
