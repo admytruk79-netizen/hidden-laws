@@ -1,0 +1,2 @@
+Force Cloudflare Pages production deployment after cinematic redesign merge.
+Production commit to deploy: 96a34762de9a972b7c62a9abc67f7ee763a04906
