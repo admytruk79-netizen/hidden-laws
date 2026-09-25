@@ -59,7 +59,7 @@
         ${item.isbn?`<div class="book-isbn">${item.isbn}</div>`:''}
         <p>${item.desc}</p>
       </div>
-      ${item.excerpt?`<details class="book-excerpt"><summary>Read selected excerpt</summary><blockquote>${item.excerpt}</blockquote></details>`:`<div class="book-excerpt-pending">Excerpt will be added from the source manuscript.</div>`}<div class="book-actions">
+      ${item.excerpt?`<details class="book-excerpt"><summary>Read selected excerpt</summary><blockquote>${item.excerpt}</blockquote></details>`:`<div class="book-excerpt-pending">Source manuscript excerpt pending.</div>`}<div class="book-actions">
         <button class="book-toggle" type="button" aria-expanded="false" aria-controls="${detailsId}">
           <span class="book-toggle-label">Details</span>
           <svg viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
