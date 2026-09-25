@@ -8,7 +8,7 @@
       meta:"Volume I · The Structure of Man",
       isbn:"ASIN B0HD6WSXQC",
       desc:"The foundational text behind the Akharata system — a structured map of inner development drawn from shamanic, yogic and energetic training, organized into a clear framework for practice rather than abstract theory.",
-      href:"https://www.amazon.com/gp/product/B0HD6WSXQC?language=en_US&currency=USD"
+      href:"https://www.amazon.com/gp/product/B0HD6WSXQC?language=en_US&currency=USD", excerpt:"This book began as a set of teaching notes, developed over years of working directly with students in shamanic practice, energy work, and Qigong instruction. It has been substantially rewritten for a different purpose: not to accompany direct, in-person teaching, but to stand on its own, for a reader who may have no teacher present at all."
     },
     {
       title:"Year’s Kaleidoscope",
@@ -29,14 +29,14 @@
       meta:"Energetic Raids, the Five Centers, and the Art of Defense",
       isbn:"ASIN B0H7QQPL8V",
       desc:"A practical guide to recognizing energetic raids on the five centers of the body and mind, and building real, verifiable defenses against them.",
-      href:"https://www.amazon.com/gp/product/B0H7QQPL8V?language=en_US&currency=USD"
+      href:"https://www.amazon.com/gp/product/B0H7QQPL8V?language=en_US&currency=USD", excerpt:"What it will do, reliably, if you actually practice the recognition exercises rather than only reading about them, is give you back the half-second of awareness between the moment a charge lands and the moment you react to it. Everything else in this book is in service of widening that half-second into something workable."
     },
     {
       title:"Energy Massage: Practitioner’s Manual",
       meta:"Chakras, Nadis, Kundalini, Zodiac & the Five Elements",
       isbn:"ASIN B0GX2ZMXDF",
       desc:"A practitioner’s manual connecting chakras, nadis, kundalini, the zodiac and the five elements into one applied system for energy massage and bodywork.",
-      href:"https://www.amazon.com/gp/product/B0GX2ZMXDF?language=en_US&currency=USD"
+      href:"https://www.amazon.com/gp/product/B0GX2ZMXDF?language=en_US&currency=USD", excerpt:"Energy massage is a system of manual and energetic techniques intended to restore the natural circulation of vital energy throughout the human body. Rather than treating isolated symptoms, the practitioner works with the body’s energetic structure as a unified whole."
     },
     {
       title:"Long Con",
@@ -59,7 +59,7 @@
         ${item.isbn?`<div class="book-isbn">${item.isbn}</div>`:''}
         <p>${item.desc}</p>
       </div>
-      <a class="excerpt-btn" href="#teachings" aria-label="Read a selected excerpt">Selected excerpt · coming soon →</a><div class="book-actions">
+      ${item.excerpt?`<details class="book-excerpt"><summary>Read selected excerpt</summary><blockquote>${item.excerpt}</blockquote></details>`:`<div class="book-excerpt-pending">Excerpt will be added from the source manuscript.</div>`}<div class="book-actions">
         <button class="book-toggle" type="button" aria-expanded="false" aria-controls="${detailsId}">
           <span class="book-toggle-label">Details</span>
           <svg viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -94,7 +94,7 @@
     .book-toggle:hover,.book-toggle:focus-visible{color:#ffe0a3}
     .book-toggle svg{width:10px;height:10px;transition:transform .3s ease}
     .book-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
-    .book-amazon{font-size:.82rem;font-weight:800;letter-spacing:.02em;color:#f2d18c;white-space:nowrap}
+    .book-excerpt{margin-top:12px;border-top:1px solid rgba(242,209,140,.16);padding-top:10px}.book-excerpt summary{cursor:pointer;color:#f2d18c;font-size:.82rem;font-weight:800}.book-excerpt blockquote{margin:12px 0 2px;padding-left:14px;border-left:2px solid #d4ae67;color:#c5ced8;font-family:Georgia,serif;font-size:.96rem;line-height:1.65}.book-excerpt-pending{margin-top:12px;color:#7f8b9a;font-size:.78rem}.book-amazon{font-size:.82rem;font-weight:800;letter-spacing:.02em;color:#f2d18c;white-space:nowrap}
     .book-amazon:hover{text-decoration:underline}
     @media(prefers-reduced-motion:reduce){.book-details{transition:none!important}}
   `;
