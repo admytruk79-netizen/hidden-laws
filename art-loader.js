@@ -98,16 +98,11 @@
     img.alt=alt;
     img.loading=key==='threshold'?'eager':'lazy';
     img.decoding='async';
-    img.src=assets[key];
-    let retried=false;
-    img.addEventListener('error',()=>{
-      if(!retried){
-        retried=true;
-        img.src=`/art/${key}.webp?v=${version}-retry-${Date.now()}`;
-        return;
-      }
-      frame.classList.add('load-failed');
-    });
+    img.src='data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+    fetch(`/art/${key}.b64?v=${version}`,{cache:'force-cache'})
+      .then(r=>{if(!r.ok)throw new Error('art '+r.status);return r.text()})
+      .then(b64=>{img.src=`data:image/webp;base64,${b64.trim()}`})
+      .catch(()=>frame.classList.add('load-failed'));
     media.appendChild(img);
     const error=document.createElement('div');
     error.className='art-error';
