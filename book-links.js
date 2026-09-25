@@ -59,7 +59,7 @@
         ${item.isbn?`<div class="book-isbn">${item.isbn}</div>`:''}
         <p>${item.desc}</p>
       </div>
-      <div class="book-actions">
+      <a class="excerpt-btn" href="#teachings" aria-label="Read a selected excerpt">Selected excerpt · coming soon →</a><div class="book-actions">
         <button class="book-toggle" type="button" aria-expanded="false" aria-controls="${detailsId}">
           <span class="book-toggle-label">Details</span>
           <svg viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
