@@ -32,7 +32,7 @@
     .bio-lineage-card strong{display:block;font-family:Georgia,serif;font-size:1.22rem;font-weight:400;color:#fff;margin-bottom:8px}
     .bio-lineage-card p{margin:0;color:#b7c0cc;font-size:.94rem;line-height:1.6;overflow-wrap:anywhere}
     .bio-lineage-note{margin-top:18px;color:#9aa8b8;font-size:.88rem;line-height:1.65;font-style:italic;max-width:100%;overflow-wrap:anywhere}
-    @media(max-width:820px){.bio-lineage-grid{grid-template-columns:1fr}.bio-lineage-image{aspect-ratio:16/10;object-position:center 42%}}
+    @media(max-width:820px){.bio-lineage-grid{display:flex;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -15px;padding:0 15px 6px;-webkit-overflow-scrolling:touch}.bio-lineage-grid::-webkit-scrollbar{display:none}.bio-lineage-grid>.bio-lineage-card{flex:0 0 82%;scroll-snap-align:start}.bio-lineage-image{aspect-ratio:16/10;object-position:center 42%}}
     @media(prefers-reduced-motion:reduce){
       .bio-lineage-card{opacity:1!important;transform:none!important;transition:none!important}
       .bio-lineage-image{transition:none!important}
