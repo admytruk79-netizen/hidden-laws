@@ -51,6 +51,11 @@
   items.forEach((item,i)=>{
     const card=document.createElement('div');
     card.className='book';
+    if(item.href){
+      card.tabIndex=0;
+      card.setAttribute('role','link');
+      card.setAttribute('aria-label',`View ${item.title} on Amazon`);
+    }
     const detailsId=`book-details-${i}`;
     card.innerHTML=`
       <strong>${item.title}</strong>
@@ -72,17 +77,31 @@
     const toggle=card.querySelector('.book-toggle');
     const label=card.querySelector('.book-toggle-label');
     const details=card.querySelector('.book-details');
-    toggle.addEventListener('click',()=>{
+    toggle.addEventListener('click',e=>{
+      e.stopPropagation();
       const expanded=details.classList.toggle('expanded');
       toggle.setAttribute('aria-expanded',String(expanded));
       label.textContent=expanded?'Hide details':'Details';
     });
+
+    const amazonLink=card.querySelector('.book-amazon');
+    if(amazonLink)amazonLink.addEventListener('click',e=>e.stopPropagation());
+
+    if(item.href){
+      const open=()=>window.open(item.href,'_blank','noopener');
+      card.addEventListener('click',open);
+      card.addEventListener('keydown',e=>{
+        if(e.target!==card)return;
+        if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}
+      });
+    }
   });
 
   const style=document.createElement('style');
   style.textContent=`
     .books{align-items:start}
-    .book{display:flex;flex-direction:column;min-width:0}
+    .book{display:flex;flex-direction:column;min-width:0;cursor:pointer;border-radius:10px;outline-offset:4px}
+    .book:focus-visible{outline:2px solid #f2d18c}
     .book>strong{display:block;color:#fff}
     .book>span{display:block;color:var(--muted);font-size:.9rem;margin-top:2px}
     .book-details{overflow:hidden;max-height:0;transition:max-height .4s cubic-bezier(.16,.84,.28,1),margin-top .4s ease;margin-top:0}
