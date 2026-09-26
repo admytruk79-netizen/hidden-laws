@@ -28,8 +28,20 @@
   const selector='.card,.bio-lineage-card,.ancestral-map,.book,.booking-shell,.principle,.path-step';
   const MAX_X=18, MAX_ROT=1.8;
 
+  function inHorizontalCarousel(el){
+    const p=el.parentElement;
+    if(!p) return false;
+    const ov=getComputedStyle(p).overflowX;
+    return ov==='auto'||ov==='scroll';
+  }
+
   function bind(el){
     if(el.dataset.hlTouchMotion==='1') return;
+    // Cards inside a horizontal scroll-snap carousel (e.g. the ASCEND grid,
+    // the Teachers & Lineage gallery) need native touch scrolling, not the
+    // pan-y + JS-drag tilt below -- the two fight over horizontal touch
+    // moves and the carousel ends up unswipeable.
+    if(inHorizontalCarousel(el)) return;
     el.dataset.hlTouchMotion='1';
     el.classList.add('hl-touch-motion');
 
