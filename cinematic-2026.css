@@ -32,9 +32,8 @@ header .wrap{width:min(1320px,calc(100% - 48px))}
 .journey-card:nth-child(1){background-image:url('/art/threshold.webp?v=cinematic-20260925')}
 .journey-card:nth-child(2){background-image:url('/art/lotus.webp?v=cinematic-20260925')}
 .journey-card:nth-child(3){background-image:url('/art/path.webp?v=cinematic-20260925')}
-.journey-card:nth-child(4){background-image:url('/art/akharata.webp?v=cinematic-20260925')}
-.journey-card:nth-child(5){background-image:url('/art/integration.webp?v=cinematic-20260925')}
-.journey-card:nth-child(6){background-image:url('/art/tree.webp?v=cinematic-20260925')}
+.journey-card:nth-child(4){background-image:url('/art/integration.webp?v=cinematic-20260925')}
+.journey-card:nth-child(5){background-image:url('/art/tree.webp?v=cinematic-20260925')}
 .journey-card .journey-icon{display:none!important}
 .journey-card h3{margin:0!important;padding:0 22px 6px!important;font-size:1.05rem!important;letter-spacing:.16em!important;color:#fff!important}
 .journey-card p{margin:0!important;padding:0 22px 22px!important;color:#d2d8de!important;font-size:.88rem!important;max-width:360px}
