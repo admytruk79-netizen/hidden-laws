@@ -29,6 +29,7 @@
     .hero-art .art-media{aspect-ratio:4/5;min-height:470px}
     .hero-art .art-copy{display:none}
     .section-art-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
+    .section-art-grid.single{grid-template-columns:1fr;max-width:560px}
     .section-art-grid .art-frame{margin:0}
     .art-error{display:none;padding:26px;color:#f2d18c;text-align:center;font-size:.88rem}
     .art-frame.load-failed .art-error{display:block}
@@ -41,9 +42,6 @@
 
     .art-integration .art-media:before{inset:-15%;background:conic-gradient(from 0deg,transparent 0 22%,rgba(242,209,140,.20) 31%,transparent 40% 64%,rgba(101,153,255,.18) 73%,transparent 82%);opacity:.42;animation:slowTurn 12s linear infinite}
     .art-integration .art-media:after{left:47%;top:8%;bottom:8%;width:6%;background:linear-gradient(180deg,transparent,rgba(255,232,170,.34),rgba(255,255,255,.12),transparent);filter:blur(8px);opacity:.5;animation:columnPulse 4.8s ease-in-out infinite}
-
-    .art-path .art-media:before{inset:0;background:radial-gradient(circle at 56% 24%,rgba(155,177,255,.28),transparent 20%),linear-gradient(180deg,rgba(205,187,255,.10),transparent 45%);opacity:.52;animation:moonAura 6.4s ease-in-out infinite}
-    .art-path .art-media:after{left:-20%;right:-20%;bottom:6%;height:26%;background:linear-gradient(180deg,transparent,rgba(198,216,255,.13));filter:blur(13px);opacity:.38;animation:hazeDrift 7.5s ease-in-out infinite alternate}
 
     .art-akharata .art-media:before{inset:-18%;background:conic-gradient(from 0deg,transparent 0 16%,rgba(242,209,140,.30) 28%,transparent 42% 64%,rgba(157,115,255,.24) 76%,transparent 90%);opacity:.55;animation:slowTurn 8s linear infinite}
     .art-akharata .art-media:after{inset:18%;border-radius:50%;border:1px solid rgba(242,209,140,.34);box-shadow:0 0 34px rgba(242,209,140,.20),inset 0 0 30px rgba(125,92,255,.14);opacity:.62;animation:haloBreathe 4.6s ease-in-out infinite}
@@ -59,8 +57,6 @@
     @keyframes waterShimmer{0%,100%{transform:translateX(-2%);opacity:.28}50%{transform:translateX(2%);opacity:.55}}
     @keyframes slowTurn{to{transform:rotate(360deg)}}
     @keyframes columnPulse{0%,100%{opacity:.26;transform:scaleY(.94)}50%{opacity:.68;transform:scaleY(1.05)}}
-    @keyframes moonAura{0%,100%{opacity:.34;transform:scale(.98)}50%{opacity:.65;transform:scale(1.05)}}
-    @keyframes hazeDrift{0%{transform:translateX(-3%)}100%{transform:translateX(3%)}}
     @keyframes haloBreathe{0%,100%{transform:scale(.96);opacity:.38}50%{transform:scale(1.05);opacity:.72}}
     @keyframes treeAura{0%{transform:translateX(-1.5%) scale(.98)}100%{transform:translateX(1.5%) scale(1.04)}}
     @keyframes leafSparkle{to{background-position:38px -38px}}
@@ -162,16 +158,13 @@
     const oldGallery=ascend.querySelector('.ascend-art-gallery');
     if(oldGallery)oldGallery.remove();
     const grid=document.createElement('div');
-    grid.className='section-art-grid ascend-art-gallery';
-    const path=makeArt(
-      'path',
-      'art-path',
-      'A traveler beginning a glowing path through a misty valley toward distant mountains beneath a great moon and orbiting rings of light',
-      'ASCEND Path',
-      'The structured 24-month developmental training pathway with daily practice, progression and integration. Currently being built — not yet available.',
-      '',
-      'Being built'
-    );
+    // ASCEND Path already has its own card in the ASCEND grid above (merged
+    // with Journey) -- this gallery used to repeat it as a second "ASCEND
+    // Path" panel with the same "being built" status, which read as the
+    // same offering mentioned twice. Only Akharata (folded into that card
+    // as a one-line mention, not its own card) still earns a dedicated
+    // art panel here.
+    grid.className='section-art-grid ascend-art-gallery single';
     const akharata=makeArt(
       'akharata',
       'art-akharata',
@@ -179,9 +172,9 @@
       'Akharata · Subtle-Body Work',
       'An advanced supporting layer within ASCEND for subtle-body development and deeper energetic practice.'
     );
-    grid.append(path,akharata);
+    grid.append(akharata);
     (ascend.querySelector('.wrap')||ascend).appendChild(grid);
-    frames.push(path,akharata);
+    frames.push(akharata);
 
     const cards=[...ascend.querySelectorAll('.card')];
     const keysCard=cards.find(card=>card.querySelector('.tag')?.textContent.trim()==='ASCEND Keys');
