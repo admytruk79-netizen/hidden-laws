@@ -72,6 +72,7 @@
         ${item.href?`<a class="book-amazon" href="${item.href}" target="_blank" rel="noopener noreferrer" aria-label="View ${item.title} on Amazon">View on Amazon →</a>`:''}
       </div>
     `;
+    if(i>=2){card.hidden=true;card.classList.add('book-extra')}
     books.appendChild(card);
 
     const toggle=card.querySelector('.book-toggle');
@@ -97,10 +98,28 @@
     }
   });
 
+  const extraCount=items.length-2;
+  if(extraCount>0){
+    const showAll=document.createElement('button');
+    showAll.className='show-more-toggle';
+    showAll.type='button';
+    showAll.setAttribute('aria-expanded','false');
+    showAll.innerHTML=`<span>Show all ${items.length} books</span><svg viewBox="0 0 12 8" fill="none" aria-hidden="true"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    books.after(showAll);
+    showAll.addEventListener('click',()=>{
+      const extras=[...books.querySelectorAll('.book-extra')];
+      const show=extras.some(c=>c.hidden);
+      extras.forEach(c=>{c.hidden=!show});
+      showAll.setAttribute('aria-expanded',String(show));
+      showAll.querySelector('span').textContent=show?'Show fewer books':`Show all ${items.length} books`;
+    });
+  }
+
   const style=document.createElement('style');
   style.textContent=`
     .books{align-items:start}
     .book{display:flex;flex-direction:column;min-width:0;cursor:pointer;border-radius:10px;outline-offset:4px}
+    .book[hidden]{display:none}
     .book:focus-visible{outline:2px solid #f2d18c}
     .book>strong{display:block;color:#fff}
     .book>span{display:block;color:var(--muted);font-size:.9rem;margin-top:2px}
