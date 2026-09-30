@@ -4,7 +4,7 @@
 
   const style=document.createElement('style');
   style.textContent=`
-    .bio-origin{margin-top:34px;padding-top:28px;border-top:1px solid rgba(255,255,255,.10);max-width:820px}
+    .bio-origin{grid-column:1/-1;margin-top:34px;padding-top:28px;border-top:1px solid rgba(255,255,255,.10);max-width:820px}
     .bio-origin h3{margin:0 0 14px;font-family:Georgia,serif;font-size:clamp(1.65rem,3vw,2.35rem);font-weight:400;color:#fff}
     .bio-origin-body{position:relative;overflow:hidden;max-height:5.2em;transition:max-height .5s cubic-bezier(.16,.84,.28,1)}
     .bio-origin-body.expanded{max-height:900px}

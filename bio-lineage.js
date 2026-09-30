@@ -9,7 +9,7 @@
 
   const style=document.createElement('style');
   style.textContent=`
-    .bio-lineage{margin-top:34px;padding-top:28px;border-top:1px solid rgba(255,255,255,.10);min-width:0;max-width:100%}
+    .bio-lineage{grid-column:1/-1;margin-top:34px;padding-top:28px;border-top:1px solid rgba(255,255,255,.10);min-width:0;max-width:100%}
     .bio-lineage h3{margin:0 0 12px;font-family:Georgia,serif;font-size:clamp(1.65rem,3vw,2.35rem);font-weight:400;color:#fff}
     .bio-lineage-intro{max-width:820px;margin:0 0 22px;color:#b7c0cc}
     .bio-lineage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;min-width:0;max-width:100%}
