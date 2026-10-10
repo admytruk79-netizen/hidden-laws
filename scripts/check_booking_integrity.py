@@ -36,6 +36,8 @@ def check(statement, message):
 for anchor in ["work", "practice", "ancestral", "ascend", "teachings", "about", "booking", "contact"]:
     check(anchor in home.ids, f"Missing Yelp-compatible page anchor: #{anchor}")
 check((ROOT / "massage.html").is_file(), "Missing massage.html")
+check("/massage /massage.html 200" in (ROOT / "_redirects").read_text(encoding="utf-8"),
+      "Missing stable Yelp /massage rewrite")
 for slug in EXPECTED:
     check(any(h == BOOKING + slug for h in home.hrefs + massage.hrefs),
           f"Missing existing Cal.com booking link: {slug}")
