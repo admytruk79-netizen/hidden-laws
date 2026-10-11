@@ -1,0 +1,17 @@
+name: Hidden Laws booking integrity
+on:
+  push:
+    branches: [main, 'ux/**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  booking-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check stable links and booking actions
+        run: python3 scripts/check_booking_integrity.py
