@@ -3,8 +3,6 @@
     const style=document.createElement('style');
     style.id='site-motion-style';
     style.textContent=`
-      /* Anchor destination must stay visible even if scroll observers do not fire. */
-      #massage-methods .motion-reveal{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
       .status-pill{background:#1f352d!important;color:#fff!important;border-color:#1f352d!important}
 
       body{perspective:1200px}
