@@ -1,6 +1,6 @@
 # Hidden Laws
 
-Primary website for Oleksandr Dmytruk's body of work, including ASCEND Keys, ASCEND Path, ASCEND Journey, Ancestral Roots, Qigong, Reiki, energetic practice, books, teaching and private sessions.
+Primary website for Oleksandr Dmytruk's body of work, including ASCEND Keys, Ancestral Roots, Qigong, Reiki, energetic practice, books, teaching and private sessions.
 
 ## Cloudflare Pages
 
@@ -62,4 +62,4 @@ The admin can edit the hero, mission, about copy and booking introduction. Chang
 
 ## Content direction
 
-Hidden Laws is the umbrella home for Oleksandr's mission and work. ASCEND is presented as a coherent system with three distinct expressions: Keys, Path and Journey. Ancestral Roots, Reiki/energetic work, Qigong/subtle-body work, books and private sessions sit beneath the same mission: preserving, developing and passing on practical knowledge while uniting inner and outer worlds through grounded practice and integration.
+Hidden Laws is the umbrella home for Oleksandr's mission and work. ASCEND is presented through ASCEND Keys, with its own page at /ascend-keys. Ancestral Roots, Reiki/energetic work, Qigong/subtle-body work, books and private sessions sit beneath the same mission: preserving, developing and passing on practical knowledge while uniting inner and outer worlds through grounded practice and integration.

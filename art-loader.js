@@ -153,45 +153,10 @@
   );
   if(missionArt)frames.push(missionArt);
 
-  const ascend=document.querySelector('#ascend');
-  if(ascend){
-    const oldGallery=ascend.querySelector('.ascend-art-gallery');
-    if(oldGallery)oldGallery.remove();
-    const grid=document.createElement('div');
-    // ASCEND Path already has its own card in the ASCEND grid above (merged
-    // with Journey) -- this gallery used to repeat it as a second "ASCEND
-    // Path" panel with the same "being built" status, which read as the
-    // same offering mentioned twice. Only Akharata (folded into that card
-    // as a one-line mention, not its own card) still earns a dedicated
-    // art panel here.
-    grid.className='section-art-grid ascend-art-gallery single';
-    const akharata=makeArt(
-      'akharata',
-      'art-akharata',
-      'A luminous stained-glass chakra mandala representing the subtle body and integrated energetic structure',
-      'Akharata · Subtle-Body Work',
-      'An advanced supporting layer within ASCEND for subtle-body development and deeper energetic practice.'
-    );
-    grid.append(akharata);
-    (ascend.querySelector('.wrap')||ascend).appendChild(grid);
-    frames.push(akharata);
-
-    const cards=[...ascend.querySelectorAll('.card')];
-    const keysCard=cards.find(card=>card.querySelector('.tag')?.textContent.trim()==='ASCEND Keys');
-    if(keysCard){
-      let link=keysCard.querySelector('.card-link');
-      if(!link){
-        link=document.createElement('a');
-        link.className='card-link';
-        keysCard.appendChild(link);
-      }
-      link.href='https://play.google.com/store/apps/details?id=com.ascend.keys26';
-      link.target='_blank';
-      link.rel='noopener noreferrer';
-      link.textContent='Install on Google Play →';
-      link.classList.add('keys-google-play');
-    }
-  }
+  // ASCEND: the section now presents ASCEND Keys only, with its own page and
+  // buttons in the markup. No art panel or injected links here.
+  const oldAscendGallery=document.querySelector('#ascend .ascend-art-gallery');
+  if(oldAscendGallery)oldAscendGallery.remove();
 
   const ancestral=document.querySelector('#ancestral');
   const tree=put(
