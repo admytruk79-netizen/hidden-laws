@@ -110,13 +110,18 @@ main section{padding:84px 0;border-bottom:1px solid var(--line2)}
 .btn.light{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);color:#fff}
 .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 footer{padding:38px 0 52px;background:#050b14}.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;color:#8390a0;font-size:.87rem}.footer-title{color:#fff;font-weight:820;letter-spacing:.16em;font-size:.8rem}
-@media(max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-grid .art-frame{max-width:380px;justify-self:center}.books-grid{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.system-intro{grid-template-columns:1fr}.system-intro .art-frame{max-width:280px;justify-self:center;order:-1}.dims-grid{grid-template-columns:repeat(2,1fr)}.laws-list{grid-template-columns:1fr}}
-@media(max-width:760px){.wrap{width:calc(100% - 30px)}nav{min-height:68px}.menu{display:block}.navlinks{display:none;position:absolute;top:68px;left:14px;right:14px;flex-direction:column;align-items:stretch;background:rgba(8,17,31,.98);padding:12px;border:1px solid var(--line2);border-radius:18px}.navlinks.open{display:flex}.navlinks a{padding:11px 12px}.books-grid{grid-template-columns:1fr}.dims-grid{grid-template-columns:1fr}main section{padding:56px 0}.stat-row{gap:26px}.flow-row{flex-direction:column;gap:10px}.flow-arrow{transform:rotate(90deg);margin:0}}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr}.hero-grid .art-frame{max-width:380px;justify-self:center}.books-grid{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}.system-intro{grid-template-columns:1fr}.system-intro .art-frame{max-width:280px;justify-self:center;order:-1}.dims-grid{grid-template-columns:repeat(2,1fr)}.laws-list{grid-template-columns:1fr}
+/* Same fix as the homepage: the nav doesn't reliably fit all the way down to
+   760px once a 6th link (Blog) is added, so the hamburger switch lives at this
+   wider 980px breakpoint instead -- and the dropdown background is solid, not
+   translucent, so page content can't bleed through behind the menu items. */
+.menu{display:block}.navlinks{display:none;position:absolute;top:68px;left:14px;right:14px;flex-direction:column;align-items:stretch;background:var(--night);padding:12px;border:1px solid var(--line2);border-radius:18px}.navlinks.open{display:flex}.navlinks a{padding:11px 12px}}
+@media(max-width:760px){.wrap{width:calc(100% - 30px)}nav{min-height:68px}.books-grid{grid-template-columns:1fr}.dims-grid{grid-template-columns:1fr}main section{padding:56px 0}.stat-row{gap:26px}.flow-row{flex-direction:column;gap:10px}.flow-arrow{transform:rotate(90deg);margin:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.book-card,.card,.dim-card{transition:none}.reveal{opacity:1!important;transform:none!important;transition:none!important}.art-frame:before,.art-media:before,.art-media:after{animation:none!important}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><nav><a class="brand" href="/"><span class="brand-mark">HL</span><span>HIDDEN LAWS</span></a><button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button><div class="navlinks" id="navlinks"><a href="/">Home</a><a href="#books">Books</a><a href="#system">The System</a><a href="#apps">ASCEND</a><a class="nav-cta" href="/#about">About Oleksandr</a></div></nav></div></header>
+<header><div class="wrap"><nav><a class="brand" href="/"><span class="brand-mark">HL</span><span>HIDDEN LAWS</span></a><button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button><div class="navlinks" id="navlinks"><a href="/">Home</a><a href="#books">Books</a><a href="#system">The System</a><a href="#apps">ASCEND</a><a href="/blog/">Blog</a><a class="nav-cta" href="/#about">About Oleksandr</a></div></nav></div></header>
 <main>
 <section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">The Work</div><h1>Books, systems <span>&amp; practice.</span></h1><p class="lead">A published body of work in esoteric and energetic practice, and ASCEND — a structured developmental system built from the ground up and running today as a live app, not a concept deck.</p>
 <div class="stat-row">
