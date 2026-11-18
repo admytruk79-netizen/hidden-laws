@@ -80,7 +80,12 @@
   revealTargets.forEach((el,i)=>{el.classList.add('motion-reveal');el.dataset.delay=String((i%4)+1)});
   const sections=[...document.querySelectorAll('main section:not(.hero)')];
   if('IntersectionObserver'in window){
-    const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}})},{threshold:.10,rootMargin:'0px 0px -5% 0px'});
+    // threshold:[0,.10] (not just .10) so a fast scroll still produces an entry to
+    // inspect even when the crossing itself is missed; skippedPast then catches a
+    // thin element (e.g. an eyebrow label atop a tall section) that a fling-scroll
+    // carried straight past the viewport without ever reporting isIntersecting --
+    // otherwise it would stay at opacity:0 forever, since nothing re-checks it.
+    const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{const skippedPast=entry.rootBounds&&entry.boundingClientRect.bottom<=entry.rootBounds.top;if(entry.isIntersecting||skippedPast){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}})},{threshold:[0,.10],rootMargin:'0px 0px -5% 0px'});
     revealTargets.forEach(el=>observer.observe(el));
     const sectionObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('section-awake')})},{threshold:.18});
     sections.forEach(el=>sectionObserver.observe(el));
