@@ -1,0 +1,2 @@
+Force Cloudflare Pages production deployment to pick up Web Analytics beacon injection after enabling it in the dashboard.
+Production commit to deploy: c123d2ed54edc7c64ea696c02219010c7b8bd4cb
