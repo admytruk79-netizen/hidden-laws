@@ -1,5 +1,10 @@
 (()=>{
-  const version='20260918-5';
+  // Matches cinematic-2026.css's own ?v= on these same six files (threshold,
+  // integration, path, akharata, tree, lotus) -- that CSS sets them as journey-card
+  // backgrounds, and a mismatched query string here made the browser treat the two
+  // references as different cache keys, downloading each ~1.2MB image twice per
+  // homepage load instead of once.
+  const version='cinematic-20260925';
   const assets={
     threshold:`/art/threshold.webp?v=${version}`,
     integration:`/art/integration.webp?v=${version}`,
