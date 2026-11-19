@@ -147,7 +147,7 @@
     frames.push(art);
   }
 
-  const mission=document.querySelector('#mission')||document.querySelector('#about');
+  const mission=document.querySelector('#mission');
   const missionArt=put(
     mission,
     'integration',
