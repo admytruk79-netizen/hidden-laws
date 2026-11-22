@@ -76,3 +76,77 @@ a.card-link{color:#e9c58a!important}
  .section-head h2,section h2{font-size:clamp(2.25rem,10vw,3.3rem)!important;line-height:1.12!important}
  .hl-vision h2{font-size:clamp(2.3rem,10vw,3.5rem)!important}
 }
+
+/* CINEMATIC EMERALD — refinement after mobile visual review.
+   One cohesive art direction: forest green, warm ivory, photograph-first. */
+html,body{overflow-x:clip}
+body{background:#071b15!important}
+header{backdrop-filter:blur(18px)!important}
+.hero{min-height:650px!important;background:linear-gradient(90deg,rgba(3,19,14,.91) 0%,rgba(3,19,14,.79) 44%,rgba(3,19,14,.30) 100%),url('/art/threshold.webp') center 42%/cover no-repeat!important}
+.hero .wrap.hero-grid{display:flex!important;align-items:center!important;width:min(1180px,calc(100% - 48px))!important;min-height:500px!important;gap:0!important;margin:auto!important}
+.hero .hero-grid>div:first-child{width:min(710px,100%)!important;padding:0!important}
+.hero .hero-art,.hero .art-frame.hero-art{display:none!important}
+.hero h1{max-width:690px!important;font-size:clamp(3.25rem,6vw,5.55rem)!important;line-height:1.03!important}
+.hero .lead{max-width:560px!important}
+.hero .btn{min-height:49px!important;padding:12px 21px!important;border-radius:999px!important;font-size:.86rem!important;letter-spacing:.02em!important}
+#start{background:#081e17!important;color:#f7ead0!important;padding:76px 0 84px!important}
+#start .eyebrow{color:#e1b979!important}
+#start h2{color:#f6e9d3!important;max-width:850px!important;font-size:clamp(2.55rem,4.5vw,4.1rem)!important}
+#start .intro{color:#c7d0c5!important;max-width:450px!important}
+#start .journey-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important}
+#start .journey-card{position:relative!important;isolation:isolate!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;min-height:255px!important;overflow:hidden!important;border:1px solid rgba(223,181,111,.35)!important;border-radius:18px!important;padding:24px!important;background-color:#113327!important;background-position:center!important;background-size:cover!important;box-shadow:0 12px 26px rgba(0,0,0,.12)!important}
+#start .journey-card:before{content:"";position:absolute!important;inset:0!important;z-index:-1!important;background:linear-gradient(180deg,rgba(3,18,13,.03) 10%,rgba(3,18,13,.26) 45%,rgba(3,18,13,.92) 100%)!important}
+#start .journey-card:nth-child(1){background-image:url('/art/threshold.webp')!important}
+#start .journey-card:nth-child(2){background-image:url('/art/lotus.webp')!important}
+#start .journey-card:nth-child(3){background-image:url('/art/tree.webp')!important}
+#start .journey-card:nth-child(4){background-image:url('/art/integration.webp')!important}
+#start .journey-card:nth-child(5){background-image:url('/art/akharata.webp')!important}
+#start .journey-card:nth-child(6){background-image:url('/art/path.webp')!important}
+#start .journey-icon{display:none!important}
+#start .journey-card h3{font:normal 1.65rem/1.12 Georgia,serif!important;color:#ffecc9!important;text-transform:none!important;letter-spacing:0!important;margin:0 0 9px!important;padding:0!important;text-shadow:0 1px 8px #071b15}
+#start .journey-card p{color:#f0e9da!important;font-size:.87rem!important;line-height:1.5!important;max-width:290px!important;display:block!important;padding:0!important;margin:0!important;text-shadow:0 1px 5px #071b15}
+#work{background:linear-gradient(150deg,#0a261c,#091d18)!important}
+#work .section-head h2{font-size:clamp(2.5rem,4.5vw,4.15rem)!important;line-height:1.08!important;max-width:730px!important}
+#work .section-head .intro{font-size:1.04rem!important;line-height:1.7!important;max-width:415px!important}
+#work .services{gap:18px!important}
+#work .card{position:relative!important;isolation:isolate!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;min-height:300px!important;overflow:hidden!important;padding:31px!important;background:#102f25!important;border:1px solid rgba(218,182,114,.25)!important;border-radius:18px!important;box-shadow:none!important}
+#work .card:before{display:none!important}
+#work .card:after{content:"";position:absolute;right:0;top:0;bottom:0;width:45%;z-index:-1;background-position:center;background-size:cover;opacity:.23;mask-image:linear-gradient(to right,transparent,black 75%);pointer-events:none}
+#work .card:nth-child(1):after{background-image:url('/art/threshold.webp')}
+#work .card:nth-child(2):after{background-image:url('/art/lotus.webp')}
+#work .card:nth-child(3):after{background-image:url('/art/integration.webp')}
+#work .card:nth-child(4):after{background-image:url('/art/tree.webp')}
+#work .card h3{font-size:clamp(1.45rem,2.3vw,2rem)!important;line-height:1.25!important;margin:15px 0 12px!important;max-width:480px!important}
+#work .card p{font-size:.97rem!important;line-height:1.72!important;max-width:540px!important}
+#work .card .meta{margin-top:auto!important;padding-top:18px!important}
+#work .card .card-link{margin-top:16px!important}
+#ancestral .art-frame,#work .art-frame{border-radius:18px!important}
+.hl-vision{background:linear-gradient(135deg,#08271d,#061b15)!important}
+.hl-vision .hl-vimage img{filter:brightness(.95) saturate(.95)!important}
+.hl-vision .hl-vimage:after{inset:42% 0 0!important;background:linear-gradient(transparent,rgba(3,22,16,.83))!important}
+.hl-vision .hl-vimage{border:1px solid rgba(221,180,109,.3)!important;box-shadow:0 16px 38px rgba(0,0,0,.17)!important}
+#ascend .hl-app-banner{border:1px solid rgba(223,185,117,.32)!important;background:linear-gradient(130deg,#173a2b,#0c201a)!important}
+#ascend .hl-key{background:#12362a!important}
+footer{background:#061710!important}
+@media(max-width:760px){
+ .hero{min-height:500px!important;padding:58px 0 68px!important;background:linear-gradient(90deg,rgba(3,18,13,.87),rgba(3,18,13,.48)),url('/art/threshold.webp') 52% 50%/cover no-repeat!important}
+ .hero .wrap.hero-grid{display:flex!important;min-height:380px!important;width:calc(100% - 40px)!important;align-items:center!important}
+ .hero h1{font-size:clamp(2.9rem,11vw,4.1rem)!important;line-height:1.02!important;letter-spacing:-.035em!important}
+ .hero .lead{font-size:.99rem!important}
+ #start{padding:54px 0 64px!important}
+ #start .section-head{margin-bottom:17px!important}
+ #start h2{font-size:clamp(2.35rem,9vw,3.3rem)!important;line-height:1.1!important}
+ #start .journey-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:11px!important}
+ #start .journey-card{min-height:210px!important;padding:16px!important;border-radius:14px!important}
+ #start .journey-card h3{font-size:1.28rem!important;line-height:1.2!important;margin-bottom:7px!important}
+ #start .journey-card p{font-size:.76rem!important;line-height:1.37!important}
+ #work .section-head h2{font-size:clamp(2.3rem,9vw,3.2rem)!important;line-height:1.1!important}
+ #work .section-head .intro{font-size:.96rem!important}
+ #work .services{grid-template-columns:1fr!important;gap:13px!important}
+ #work .card{min-height:0!important;padding:23px!important;border-radius:15px!important}
+ #work .card h3{font-size:1.57rem!important;line-height:1.25!important}
+ #work .card p{font-size:.91rem!important;line-height:1.65!important}
+ #work .card:after{width:58%!important;opacity:.18!important}
+ #work .card .meta{padding-top:9px!important}
+ .hl-vision .hl-vimage img{filter:brightness(.96) saturate(1)!important}
+}
