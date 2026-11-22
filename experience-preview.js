@@ -8,8 +8,8 @@
   .hl-vision .hl-summary{font-size:clamp(1.03rem,1.55vw,1.19rem);line-height:1.8;color:#d4d8cb;max-width:730px;margin-bottom:34px}
   .hl-now{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:0 0 48px}.hl-now strong{color:#f3ddae;font-size:.88rem;margin-right:8px}.hl-now span{border:1px solid rgba(231,195,138,.32);border-radius:999px;padding:8px 15px;font-size:.84rem;color:#f1e3c9;background:rgba(255,255,255,.035)}
   .hl-vision-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:22px}.hl-vimage{position:relative;min-height:430px;border-radius:22px;overflow:hidden;border:1px solid rgba(225,189,123,.28);background:#13271e}
-  .hl-vimage img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;filter:brightness(.77) saturate(.82)}
-  .hl-vimage:after{content:"";position:absolute;inset:25% 0 0;background:linear-gradient(transparent,rgba(1,16,11,.92))}
+  .hl-vimage img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0;filter:brightness(.92) saturate(.96)}
+  .hl-vimage:after{content:"";position:absolute;inset:42% 0 0;background:linear-gradient(transparent,rgba(1,16,11,.85))}
   .hl-vimage .hl-overlay{position:absolute;bottom:27px;left:30px;right:30px;z-index:2}.hl-vimage h3{font:normal 2.15rem/1.08 Georgia,serif;color:#fff0ce;margin:0 0 10px}.hl-vimage p{max-width:470px;margin:0;color:#ede5d4;line-height:1.6}
   .hl-vside{display:grid;grid-template-rows:1fr 1fr;gap:22px}.hl-vside .hl-vimage{min-height:202px}.hl-vside .hl-vimage h3{font-size:1.52rem}.hl-vside .hl-overlay{bottom:19px;left:23px;right:23px}
   .hl-vision .hl-future{display:flex;justify-content:space-between;align-items:center;gap:28px;padding-top:26px;color:#d5c7a7;font-size:.9rem}.hl-future strong{color:#f4e0b7}.hl-future a{display:inline-flex;padding:12px 20px;border:1px solid #b99858;border-radius:999px;color:#f5d89d;white-space:nowrap}
@@ -26,15 +26,15 @@
   if(work){
     const section=document.createElement('section');section.className='hl-vision';section.id='vision';section.innerHTML=`
       <div class="wrap">
-        <div class="hl-eyebrow">The Hidden Laws Vision · Today & Tomorrow</div>
+        <div class="hl-eyebrow">THE NEXT CHAPTER · HIDDEN LAWS</div>
         <h2>From individual practice to a place of discovery.</h2>
         <p class="hl-summary">Hidden Laws begins with personal experience — contemplative practice, energy work, ancestral exploration and the study of deeper patterns in everyday life. Today the work is offered through mobile and remote sessions. The next chapter is a dedicated place for practice, study and meaningful connection.</p>
         <div class="hl-now"><strong>AVAILABLE NOW</strong><span>Mobile sessions</span><span>Remote sessions</span><span>One-to-one guidance</span><span>ASCEND Keys app</span></div>
         <div class="hl-vision-grid">
-          <div class="hl-vimage"><img src="/art/integration.webp" alt="Symbolic fire and water artwork representing the integration of different traditions" loading="lazy"><div class="hl-overlay"><h3>A space for deeper practice.</h3><p>A future home for guided sessions, stillness, study and shared exploration.</p></div></div>
+          <div class="hl-vimage"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" onerror="this.onerror=null;this.src='/art/integration.webp'" alt="Warm, intimate interior representing the envisioned Hidden Laws space" loading="lazy"><div class="hl-overlay"><h3>A space for deeper practice.</h3><p>A future home for guided sessions, stillness, study and shared exploration.</p></div></div>
           <div class="hl-vside">
             <div class="hl-vimage"><img src="/art/tree.webp" alt="Ancestral tree artwork" loading="lazy"><div class="hl-overlay"><h3>Roots & lineage</h3><p>Reflection on what we carry forward.</p></div></div>
-            <div class="hl-vimage"><img src="/art/akharata.webp" alt="Symbolic artwork for books and inner study" loading="lazy"><div class="hl-overlay"><h3>Books & knowledge</h3><p>A future setting for study and conversation.</p></div></div>
+            <div class="hl-vimage"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&amp;fit=crop&amp;w=900&amp;q=85" onerror="this.onerror=null;this.src='/art/akharata.webp'" alt="Warm library bookshelves representing a future environment for study" loading="lazy"><div class="hl-overlay"><h3>Books & knowledge</h3><p>A future setting for study and conversation.</p></div></div>
           </div>
         </div>
         <div class="hl-future"><span><strong>A vision in development.</strong> The physical Hidden Laws space, library and tea environment are future concepts, not currently open facilities.</span><a href="#booking">Explore what's available now</a></div>
