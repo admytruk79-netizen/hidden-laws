@@ -8,10 +8,10 @@
     .bio-origin h3{margin:0 0 14px;font-family:Georgia,serif;font-size:clamp(1.65rem,3vw,2.35rem);font-weight:400;color:#fff}
     .bio-origin-body{position:relative;overflow:hidden;max-height:5.2em;transition:max-height .5s cubic-bezier(.16,.84,.28,1)}
     .bio-origin-body.expanded{max-height:900px}
-    .bio-origin-body:not(.expanded):after{content:"";position:absolute;left:0;right:0;bottom:0;height:2.6em;background:linear-gradient(180deg,transparent,#08111f)}
-    .bio-origin p{margin:0 0 16px;color:#b7c0cc;font-size:1rem;line-height:1.75}
+    .bio-origin-body:not(.expanded):after{content:"";position:absolute;left:0;right:0;bottom:0;height:2.6em;background:linear-gradient(180deg,transparent,#0b251c)}
+    .bio-origin p{margin:0 0 16px;color:#c8d0c3;font-size:1rem;line-height:1.75}
     .bio-origin p:last-child{margin-bottom:0}
-    .bio-origin-toggle{position:relative;z-index:2;display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:0;border:0;background:none;color:#f2d18c;font-size:.86rem;font-weight:800;letter-spacing:.03em;cursor:pointer}
+    .bio-origin-toggle{position:relative;z-index:2;display:inline-flex;align-items:center;gap:6px;margin-top:14px;padding:0;border:0;background:none;color:#edcf96;font-size:.86rem;font-weight:800;letter-spacing:.03em;cursor:pointer}
     .bio-origin-toggle:hover{color:#ffe0a3}
     .bio-origin-toggle svg{width:11px;height:11px;transition:transform .3s ease}
     .bio-origin-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
