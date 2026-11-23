@@ -182,3 +182,35 @@ main section:not(.hero):not(#start):not(#vision)::after{
  #vision.hl-vision::before{filter:blur(16px);opacity:.53}
 }
 @media(prefers-reduced-motion:reduce){main section::before,main section::after{animation:none!important}}
+
+
+/* Presentation-reference path navigation: ivory editorial band beneath cinematic hero. */
+#start{background:#eee9dd!important;padding:47px 0 58px!important}
+#start:before,#start:after{display:none!important}
+#start .eyebrow{color:#957142!important}
+#start h2{color:#193d2d!important;font-size:clamp(2.2rem,3.8vw,3.45rem)!important}
+#start .intro{color:#4b6757!important}
+#start .journey-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:0!important;border-block:1px solid rgba(61,89,71,.19)}
+#start .journey-card,#start .journey-card:nth-child(n){background:none!important;box-shadow:none!important;min-height:0!important;border:0!important;border-right:1px solid rgba(61,89,71,.19)!important;border-radius:0!important;padding:25px 24px!important;justify-content:flex-start!important;align-items:flex-start!important;transform:none!important}
+#start .journey-card:nth-child(3n){border-right:0!important}
+#start .journey-card:nth-child(n):before{display:none!important}
+#start .journey-card .journey-icon{display:block!important;color:#a57f48!important;font-size:1.6rem!important;margin:0 0 12px!important;text-shadow:none!important}
+#start .journey-card h3{font:normal 1.44rem/1.19 Georgia,serif!important;color:#234331!important;text-shadow:none!important;letter-spacing:0!important;margin:0 0 7px!important}
+#start .journey-card p{color:#5c7162!important;text-shadow:none!important;font-size:.82rem!important;line-height:1.54!important}
+#start .journey-card:hover{background:rgba(255,255,255,.25)!important}
+#vision .hl-vimage{min-height:480px!important}
+#vision .hl-vimage img{object-fit:cover!important;object-position:center!important;filter:saturate(.8) contrast(1.05)!important}
+#vision .hl-vimage .hl-overlay{padding-top:22px}
+#vision .hl-vimage .hl-overlay h3{color:#f7e8c7!important}
+#vision .hl-vimage .hl-overlay p{color:#ece2d1!important}
+@media(max-width:650px){
+ #start{padding:44px 0 50px!important}
+ #start h2{font-size:2.48rem!important}
+ #start .journey-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0!important}
+ #start .journey-card,#start .journey-card:nth-child(n){min-height:138px!important;padding:19px 13px!important;border-right:1px solid rgba(61,89,71,.19)!important;border-bottom:1px solid rgba(61,89,71,.19)!important}
+ #start .journey-card:nth-child(2n){border-right:0!important}
+ #start .journey-icon{font-size:1.4rem!important;margin-bottom:9px!important}
+ #start .journey-card h3{font-size:1.18rem!important}
+ #start .journey-card p{font-size:.76rem!important;line-height:1.42!important}
+ #vision .hl-vimage{min-height:315px!important}
+}
