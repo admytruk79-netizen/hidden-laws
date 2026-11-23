@@ -136,3 +136,49 @@ footer{background:#061810!important}
  #ascend .hl-keys{grid-template-columns:1fr!important}
 }
 @media(prefers-reduced-motion:reduce){.hero,.journey-card,.btn{transition:none!important}}
+
+
+/* Cinematic image showcase: independently blurred backdrops, crisp foreground. */
+body{background:#071a14!important}
+main section:not(.hero){isolation:isolate;position:relative;overflow:hidden}
+main section:not(.hero):not(#start):not(#vision)::before{
+ content:"";position:absolute;inset:-35px;z-index:-2;pointer-events:none;
+ background-image:var(--scene-image);background-size:cover;background-position:center;
+ filter:blur(22px) saturate(.88);transform:scale(1.08);opacity:.35
+}
+main section:not(.hero):not(#start):not(#vision)::after{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background:linear-gradient(110deg,rgba(5,28,20,.88),rgba(6,30,23,.71) 52%,rgba(5,23,17,.82))
+}
+#work{--scene-image:url('/art/lotus.webp')}
+#ancestral{--scene-image:url('/art/tree.webp')}
+#ascend{--scene-image:url('/art/integration.webp')}
+#teachings{--scene-image:url('/art/akharata.webp')}
+#about{--scene-image:url('/art/path.webp')}
+#blog{--scene-image:url('/art/threshold.webp')}
+#booking{--scene-image:url('/art/lotus.webp')}
+#work,#ancestral,#ascend,#teachings,#about,#blog,#booking{background:#0b281e!important}
+#work>.wrap,#ancestral>.wrap,#ascend>.wrap,#teachings>.wrap,#about>.wrap,#blog>.wrap,#booking>.wrap{position:relative;z-index:1}
+#start{isolation:isolate;position:relative;background:#0b271e!important}
+#start::before{content:"";position:absolute;z-index:-2;inset:-30px;background:url('/art/path.webp') center/cover no-repeat;filter:blur(28px) saturate(.7);opacity:.24;transform:scale(1.06)}
+#start::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(5,25,18,.78)}
+#start>.wrap{position:relative;z-index:1}
+.hero{isolation:isolate}
+.hero::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:linear-gradient(90deg,rgba(5,26,18,.9),rgba(5,26,18,.4)),url('/art/threshold.webp') 55% 43%/cover no-repeat;filter:saturate(.78)}
+.hero>.wrap{z-index:1!important}
+#vision.hl-vision{isolation:isolate;position:relative;background:#0a291e!important}
+#vision.hl-vision::before{content:"";position:absolute;inset:-40px;z-index:-2;pointer-events:none;background:url('/art/integration.webp') center/cover no-repeat;filter:blur(30px) saturate(.8);opacity:.30}
+#vision.hl-vision::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(110deg,rgba(6,30,22,.90),rgba(7,34,24,.79))}
+#vision.hl-vision>.wrap{position:relative;z-index:1}
+.booking-shell{background:rgba(12,43,32,.88)!important;border-color:rgba(222,182,115,.27)!important;box-shadow:0 14px 45px rgba(0,0,0,.18)!important;border-radius:17px!important}
+#ascend .hl-app-banner{background:rgba(13,45,34,.82)!important}
+#ascend .hl-app-orbit{background:radial-gradient(circle,rgba(225,185,112,.22),transparent 58%),#12372a!important}
+.hl-vision .hl-vimage img{filter:brightness(.93) saturate(.9)!important}
+.hl-vision .hl-vimage{background:#11372a!important}
+@media(max-width:650px){
+ main section:not(.hero):not(#start):not(#vision)::before{filter:blur(17px) saturate(.8);opacity:.28}
+ main section:not(.hero):not(#start):not(#vision)::after{background:linear-gradient(180deg,rgba(5,28,20,.83),rgba(5,28,20,.88))}
+ #start::before{filter:blur(20px);opacity:.22}
+ #vision.hl-vision::before{filter:blur(22px);opacity:.24}
+}
+@media(prefers-reduced-motion:reduce){main section::before,main section::after{animation:none!important}}
