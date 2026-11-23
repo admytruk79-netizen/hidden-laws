@@ -17,17 +17,17 @@
   const style=document.createElement('style');
   style.id='hidden-laws-art-style';
   style.textContent=`
-    .art-frame{position:relative;overflow:hidden;isolation:isolate;border-radius:28px;border:1px solid rgba(242,209,140,.28);background:#0b1728;box-shadow:0 28px 90px rgba(0,0,0,.34);opacity:0;transform:translateY(24px);filter:none!important;transition:opacity .65s ease,transform .75s cubic-bezier(.16,.84,.28,1),box-shadow .3s ease;text-decoration:none;color:inherit}
+    .art-frame{position:relative;overflow:hidden;isolation:isolate;border-radius:28px;border:1px solid rgba(242,209,140,.28);background:#0c271d;box-shadow:0 28px 90px rgba(0,0,0,.34);opacity:0;transform:translateY(24px);filter:none!important;transition:opacity .65s ease,transform .75s cubic-bezier(.16,.84,.28,1),box-shadow .3s ease;text-decoration:none;color:inherit}
     .art-frame.is-visible{opacity:1;transform:translateY(0)}
-    .art-media{position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(180deg,#0d1c30,#08111f);aspect-ratio:4/3}
+    .art-media{position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(180deg,#0e3024,#071d16);aspect-ratio:4/3}
     .art-frame img{display:block;width:100%;height:100%;max-width:100%;object-fit:contain;image-rendering:auto;transform:none!important;filter:none!important;animation:none!important;will-change:auto!important;position:relative;z-index:1}
     .art-frame:before{content:"";position:absolute;inset:-10%;z-index:2;pointer-events:none;background:radial-gradient(circle at 50% 40%,rgba(242,209,140,.14),transparent 58%);mix-blend-mode:screen;animation:artGlow 5.5s ease-in-out infinite}
     .art-frame:after{content:"";position:absolute;inset:0;z-index:5;pointer-events:none;border:1px solid rgba(242,209,140,.24);border-radius:inherit;box-shadow:inset 0 0 36px rgba(212,174,103,.05)}
     .art-media:before,.art-media:after{content:"";position:absolute;pointer-events:none;z-index:3;opacity:0}
-    .art-copy{position:relative;z-index:6;padding:18px 20px 20px;border-top:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(10,23,40,.98),rgba(7,16,29,.98))}
+    .art-copy{position:relative;z-index:6;padding:18px 20px 20px;border-top:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(9,35,26,.98),rgba(7,27,20,.98))}
     .art-copy h3{margin:0 0 7px;font-family:Georgia,serif;font-size:1.22rem;font-weight:400;color:#fff;letter-spacing:-.01em}
     .art-copy p{margin:0;color:#aeb9c6;font-size:.92rem;line-height:1.55}
-    .art-action{display:inline-flex;margin-top:13px;color:#f2d18c;font-size:.82rem;font-weight:800;letter-spacing:.04em}
+    .art-action{display:inline-flex;margin-top:13px;color:#edcf96;font-size:.82rem;font-weight:800;letter-spacing:.04em}
     a.art-frame{cursor:pointer}
     a.art-frame:hover{border-color:rgba(242,209,140,.52);box-shadow:0 34px 100px rgba(0,0,0,.42)}
     .hero-art.art-frame{width:100%;display:block}
@@ -36,10 +36,10 @@
     .section-art-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:34px}
     .section-art-grid.single{grid-template-columns:1fr;max-width:560px}
     .section-art-grid .art-frame{margin:0}
-    .art-error{display:none;padding:26px;color:#f2d18c;text-align:center;font-size:.88rem}
+    .art-error{display:none;padding:26px;color:#edcf96;text-align:center;font-size:.88rem}
     .art-frame.load-failed .art-error{display:block}
     .art-frame.load-failed img{display:none}
-    .keys-google-play{display:inline-flex!important;align-items:center;justify-content:center;min-height:44px;padding:10px 15px!important;border:1px solid rgba(242,209,140,.38);border-radius:999px;color:#f2d18c!important;text-decoration:none!important;font-weight:800!important}
+    .keys-google-play{display:inline-flex!important;align-items:center;justify-content:center;min-height:44px;padding:10px 15px!important;border:1px solid rgba(242,209,140,.38);border-radius:999px;color:#edcf96!important;text-decoration:none!important;font-weight:800!important}
 
     /* Motion is layered over the art so the source image stays sharp. */
     .art-threshold .art-media:before{inset:0;background:radial-gradient(circle at 25% 32%,rgba(255,154,68,.26),transparent 18%),radial-gradient(circle at 72% 18%,rgba(133,184,255,.24),transparent 16%);opacity:.55;animation:thresholdLight 6.8s ease-in-out infinite alternate}
