@@ -11,7 +11,7 @@
   style.textContent=`
     .bio-lineage{grid-column:1/-1;margin-top:34px;padding-top:28px;border-top:1px solid rgba(255,255,255,.10);min-width:0;max-width:100%}
     .bio-lineage h3{margin:0 0 12px;font-family:Georgia,serif;font-size:clamp(1.65rem,3vw,2.35rem);font-weight:400;color:#fff}
-    .bio-lineage-intro{max-width:820px;margin:0 0 22px;color:#b7c0cc}
+    .bio-lineage-intro{max-width:820px;margin:0 0 22px;color:#c8d0c3}
     .bio-lineage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;min-width:0;max-width:100%}
     .bio-lineage-card{position:relative;padding:0 0 20px;border:1px solid rgba(255,255,255,.10);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02));overflow:hidden;isolation:isolate;min-width:0;max-width:100%;opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .75s cubic-bezier(.16,.84,.28,1),border-color .3s ease,box-shadow .3s ease}
     .bio-lineage-card.is-visible{opacity:1;transform:translateY(0)}
@@ -28,10 +28,10 @@
     @keyframes lineageDawn{0%,100%{opacity:.30;transform:scale(.98)}50%{opacity:.6;transform:scale(1.06)}}
     @keyframes lineageEmber{0%,100%{opacity:.34;transform:scale(1)}50%{opacity:.64;transform:scale(1.07)}}
     .bio-lineage-card-body{position:relative;z-index:3;padding:20px 20px 0;min-width:0}
-    .bio-lineage-card .label{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#f2d18c;margin-bottom:8px}
+    .bio-lineage-card .label{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#edcf96;margin-bottom:8px}
     .bio-lineage-card strong{display:block;font-family:Georgia,serif;font-size:1.22rem;font-weight:400;color:#fff;margin-bottom:8px}
-    .bio-lineage-card p{margin:0;color:#b7c0cc;font-size:.94rem;line-height:1.6;overflow-wrap:anywhere}
-    .bio-lineage-note{margin-top:18px;color:#9aa8b8;font-size:.88rem;line-height:1.65;font-style:italic;max-width:100%;overflow-wrap:anywhere}
+    .bio-lineage-card p{margin:0;color:#c8d0c3;font-size:.94rem;line-height:1.6;overflow-wrap:anywhere}
+    .bio-lineage-note{margin-top:18px;color:#aec3b2;font-size:.88rem;line-height:1.65;font-style:italic;max-width:100%;overflow-wrap:anywhere}
     @media(max-width:820px){.bio-lineage-grid{display:flex;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -15px;padding:0 15px 6px;-webkit-overflow-scrolling:touch;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 24px,#000 calc(100% - 40px),transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 24px,#000 calc(100% - 40px),transparent 100%)}.bio-lineage-grid::-webkit-scrollbar{display:none}.bio-lineage-grid>.bio-lineage-card{flex:0 0 82%;scroll-snap-align:start}.bio-lineage-image{aspect-ratio:16/10;object-position:center 42%}}
     @media(prefers-reduced-motion:reduce){
       .bio-lineage-card{opacity:1!important;transform:none!important;transition:none!important}
