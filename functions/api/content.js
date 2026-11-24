@@ -1,8 +1,8 @@
 const CONTENT_KEY='site:content:v2';
 const DEFAULTS = {
   heroKicker: 'Knowledge · Practice · Integration',
-  heroTitle: 'Uniting the worlds.',
-  heroLead: 'Hidden Laws is the home of my work in conscious development, ancestral practice, Qigong, Reiki, energetic awareness and the ASCEND system — built to bring inner experience back into ordinary life.',
+  heroTitle: 'Discover the Hidden Laws.',
+  heroLead: "Practical knowledge for conscious development — through direct experience, reflection, and work that can be applied in everyday life.",
   mission: 'To preserve, develop and pass on practical knowledge that helps people understand themselves, reconnect with deeper layers of life, and carry what they discover back into the world.',
   missionBody: 'The aim is not to escape one world for another. It is to connect inner and outer, visible and subtle, ancestral and present, knowledge and experience — while keeping discernment, responsibility and ordinary life at the center.',
   aboutTitle: 'A life of practice, study and transmission.',

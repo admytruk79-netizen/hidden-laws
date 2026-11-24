@@ -76,7 +76,7 @@
     document.head.appendChild(style);
   }
 
-  const revealTargets=[...document.querySelectorAll('section:not(.hero) .eyebrow,section:not(.hero) h2,section:not(.hero) .intro,.statement,.card,.principle,.path-step,.book,.ancestral-map,.booking-shell,.contact-copy,.form')];
+  const revealTargets=[...document.querySelectorAll('section:not(.hero) .eyebrow,section:not(.hero) h2,section:not(.hero) .intro,.statement,.card,.principle,.path-step,.book,.ancestral-map,.booking-shell,.contact-copy,.form,.journey-card')];
   revealTargets.forEach((el,i)=>{el.classList.add('motion-reveal');el.dataset.delay=String((i%4)+1)});
   const sections=[...document.querySelectorAll('main section:not(.hero)')];
   if('IntersectionObserver'in window){
